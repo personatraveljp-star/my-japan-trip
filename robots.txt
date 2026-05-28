@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://myjapantrip.net/sitemap.xml
