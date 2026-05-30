@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Time to Visit Japan by Region — My Japan Trip</title>
+  <meta name="description" content="When is the best time to visit Japan? A Japanese local breaks down climate, crowds, and national holidays by region — from Hokkaido to Okinawa." />
+  <meta property="og:title" content="Best Time to Visit Japan — By Region" />
+  <meta property="og:description" content="Climate, crowds, and Japan's national holidays explained by a Japanese local. Plan your trip the smart way." />
+  <meta property="og:url" content="https://myjapantrip.net/blog-best-time-japan.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --coral: #993C1D; --coral-light: #FAECE7; --coral-dark: #712B13;
+      --bg: #E8E0D0; --bg2: #DDD5C4;
+      --text: #2C2C2A; --text2: #5F5E5A; --text3: #888780; --border: rgba(0,0,0,0.1);
+    }
+    body { font-family: 'Cormorant Garamond', Georgia, serif; color: var(--text); background: var(--bg); font-size: 18px; line-height: 1.7; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; border-bottom: 0.5px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { font-size: 18px; letter-spacing: 0.08em; text-decoration: none; color: var(--text); }
+    .nav-logo em { font-style: italic; color: var(--coral); }
+    .nav-links { display: flex; gap: 2rem; font-size: 13px; letter-spacing: 0.06em; }
+    .nav-links a { text-decoration: none; color: var(--text2); }
+    .nav-links a:hover { color: var(--coral); }
+    .nav-cta { padding: 7px 20px; border: 0.5px solid var(--coral); color: var(--coral); font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.08em; text-decoration: none; }
+    .nav-cta:hover { background: var(--coral-light); }
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
+    .article-header { padding: 4rem 0 2.5rem; border-bottom: 0.5px solid var(--border); }
+    .article-tag { font-size: 10px; letter-spacing: 0.18em; color: var(--coral); text-transform: uppercase; margin-bottom: 0.8rem; display: block; }
+    .article-title { font-size: 38px; font-weight: 300; line-height: 1.2; margin-bottom: 1rem; }
+    .article-title em { font-style: italic; color: var(--coral); }
+    .article-meta { font-size: 13px; color: var(--text3); display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .article-meta span { display: flex; align-items: center; gap: 5px; }
+    .article-intro { font-size: 16px; color: #712B13; font-weight: 300; line-height: 1.8; font-style: italic; padding: 1.2rem 1.4rem; border-left: 2px solid var(--coral); background: var(--coral-light); margin-top: 1.5rem; }
+    .article-body { padding: 3rem 0; }
+    .article-body h2 { font-size: 26px; font-weight: 300; margin: 2.5rem 0 0.8rem; }
+    .article-body h2 em { font-style: italic; color: var(--coral); }
+    .article-body p { font-size: 16px; color: var(--text2); font-weight: 300; line-height: 1.9; margin-bottom: 1.2rem; }
+    .article-body p strong { font-weight: 500; color: var(--text); }
+    .divider { height: 0.5px; background: var(--border); margin: 2.5rem 0; }
+
+    /* Tables */
+    .table-wrap { overflow-x: auto; margin: 1.5rem 0 2rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; font-family: 'Cormorant Garamond', serif; }
+    thead tr { background: #2C2C2A; }
+    thead th { color: #F1EFE8; padding: 10px 12px; text-align: center; font-weight: 400; font-size: 12px; letter-spacing: 0.06em; border: 0.5px solid #444; white-space: nowrap; }
+    thead th:first-child { text-align: left; }
+    tbody tr:nth-child(even) { background: var(--bg2); }
+    tbody tr:nth-child(odd) { background: var(--bg); }
+    tbody td { padding: 9px 12px; border: 0.5px solid var(--border); text-align: center; color: var(--text2); font-weight: 300; white-space: nowrap; }
+    tbody td:first-child { text-align: left; font-weight: 500; color: var(--text); }
+    .cell-spring { color: #4A9045; font-weight: 400; }
+    .cell-summer { color: #C4600A; font-weight: 400; }
+    .cell-autumn { color: #A0490A; font-weight: 400; }
+    .cell-winter { color: #3A6EA8; font-weight: 400; }
+    .cell-warn { background: #FFF3CD !important; color: #856404; }
+    .cell-good { background: #D4EDDA !important; color: #155724; }
+    .cell-hot { background: #F8D7DA !important; color: #721C24; }
+
+    /* Holiday table */
+    .holiday-table td:first-child { font-weight: 400; color: var(--coral); }
+    .holiday-warn { background: #FAECE7 !important; }
+
+    /* Tip box */
+    .tip-box { background: var(--coral-light); border-left: 2px solid var(--coral); padding: 1rem 1.4rem; margin: 1.5rem 0; }
+    .tip-box p { font-size: 14px; color: #712B13; margin: 0; line-height: 1.7; }
+    .tip-box p strong { font-weight: 500; }
+
+    /* Author */
+    .author-box { border: 0.5px solid var(--border); padding: 1.5rem; margin: 2.5rem 0; display: flex; gap: 1.2rem; align-items: flex-start; background: var(--bg); }
+    .author-icon { width: 48px; height: 48px; border-radius: 50%; background: var(--coral-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .author-icon i { font-size: 22px; color: var(--coral); }
+    .author-name { font-size: 15px; font-weight: 500; margin-bottom: 0.3rem; }
+    .author-bio { font-size: 13px; color: var(--text2); font-weight: 300; line-height: 1.6; }
+
+    /* CTA */
+    .article-cta { border: 0.5px solid var(--coral); padding: 2rem; text-align: center; margin: 2rem 0 3rem; background: var(--coral-light); }
+    .article-cta h3 { font-size: 22px; font-weight: 300; margin-bottom: 0.5rem; }
+    .article-cta h3 em { font-style: italic; color: var(--coral); }
+    .article-cta p { font-size: 14px; color: var(--text2); font-weight: 300; margin-bottom: 1.2rem; }
+    .btn-primary { display: inline-block; padding: 10px 28px; border: 0.5px solid var(--coral); background: var(--coral); color: var(--coral-light); font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.1em; text-decoration: none; margin: 0.3rem; }
+    .btn-primary:hover { background: var(--coral-dark); }
+    .btn-outline { display: inline-block; padding: 10px 28px; border: 0.5px solid var(--coral); background: none; color: var(--coral); font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.1em; text-decoration: none; margin: 0.3rem; }
+    .btn-outline:hover { background: var(--coral-light); }
+
+    footer { padding: 2rem 3rem; border-top: 0.5px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-size: 16px; letter-spacing: 0.08em; }
+    .footer-logo em { font-style: italic; color: var(--coral); }
+    .footer-links { display: flex; gap: 1.5rem; font-size: 12px; color: var(--text3); }
+    .footer-links a { text-decoration: none; color: inherit; }
+    .footer-links a:hover { color: var(--coral); }
+    .footer-copy { font-size: 11px; color: var(--text3); }
+    @media (max-width: 640px) {
+      nav { padding: 1rem 1.2rem; }
+      .nav-links { display: none; }
+      .article-title { font-size: 28px; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/index.html">My <em>Japan</em> Trip</a>
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/index.html">Plans</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/index.html">About</a>
+    <a href="/index.html">FAQ</a>
+  </div>
+  <a class="nav-cta" href="/index.html">Get your guide</a>
+</nav>
+
+<div class="article-wrap">
+
+  <div class="article-header">
+    <span class="article-tag">Regional guide · Seasonal travel</span>
+    <h1 class="article-title">Best time to visit Japan — <em>by region.</em></h1>
+    <div class="article-meta">
+      <span><i class="ti ti-user"></i> By a Japanese local</span>
+      <span><i class="ti ti-calendar"></i> May 2026</span>
+      <span><i class="ti ti-clock"></i> 6 min read</span>
+    </div>
+    <div class="article-intro">
+      When is the best time to visit Japan? It's a question many travellers ask. As someone who has spent their whole life exploring Japan's regions, here is my honest answer — and it's not a simple one.
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <h2>Japan is a long, <em>narrow</em> country.</h2>
+    <p>Before anything else, one thing is essential to understand: Japan stretches from subarctic Hokkaido in the north to subtropical Okinawa in the south. The climate varies dramatically by region. What is comfortable in Kyoto in August can be unbearable; what feels cold in Tokyo in January is mild compared to Hokkaido's deep snow.</p>
+    <p>The table below summarises typical temperatures, weather conditions, and humidity across Japan's main regions by season — to help you plan more precisely.</p>
+
+    <!-- Climate Table -->
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>🌸 Spring (Mar–May)</th>
+            <th>☀️ Summer (Jun–Aug)</th>
+            <th>🍂 Autumn (Sep–Nov)</th>
+            <th>❄️ Winter (Dec–Feb)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hokkaido</td>
+            <td class="cell-spring">8–15°C<br>Cool, clear<br>Low humidity</td>
+            <td class="cell-summer cell-good">17–25°C<br>Mild & sunny<br>Low humidity ✦</td>
+            <td class="cell-autumn">5–15°C<br>Crisp, colourful<br>Low humidity</td>
+            <td class="cell-winter">−10–0°C<br>Heavy snow<br>Dry</td>
+          </tr>
+          <tr>
+            <td>Tohoku</td>
+            <td class="cell-spring">8–18°C<br>Mild, some rain<br>Medium humidity</td>
+            <td class="cell-summer">22–30°C<br>Warm, festivals<br>Medium humidity</td>
+            <td class="cell-autumn cell-good">10–20°C<br>Clear, foliage<br>Low humidity ✦</td>
+            <td class="cell-winter">−5–5°C<br>Heavy snow<br>Dry</td>
+          </tr>
+          <tr>
+            <td>Tokyo</td>
+            <td class="cell-spring cell-good">12–20°C<br>Mild, blossoms<br>Medium humidity ✦</td>
+            <td class="cell-summer cell-hot">28–35°C<br>Hot, humid<br>Very high humidity ✗</td>
+            <td class="cell-autumn cell-good">15–25°C<br>Clear, pleasant<br>Low humidity ✦</td>
+            <td class="cell-winter">2–10°C<br>Dry, clear<br>Low humidity</td>
+          </tr>
+          <tr>
+            <td>Hokuriku (Kanazawa)</td>
+            <td class="cell-spring">10–18°C<br>Mild, some rain<br>Medium humidity</td>
+            <td class="cell-summer">25–32°C<br>Warm, humid<br>High humidity</td>
+            <td class="cell-autumn">12–22°C<br>Clear, beautiful<br>Low humidity</td>
+            <td class="cell-winter">1–8°C<br>Heavy snow & rain<br>High humidity</td>
+          </tr>
+          <tr>
+            <td>Kyoto / Osaka</td>
+            <td class="cell-spring cell-good">12–22°C<br>Mild, blossoms<br>Medium humidity ✦</td>
+            <td class="cell-summer cell-hot">30–38°C<br>Very hot, humid<br>Very high humidity ✗</td>
+            <td class="cell-autumn cell-good">15–25°C<br>Clear, foliage<br>Low humidity ✦</td>
+            <td class="cell-winter">3–10°C<br>Cool, occasional snow<br>Low humidity</td>
+          </tr>
+          <tr>
+            <td>Kyushu (Fukuoka)</td>
+            <td class="cell-spring cell-good">13–22°C<br>Mild, early blossoms<br>Medium humidity ✦</td>
+            <td class="cell-summer cell-hot">28–35°C<br>Hot, rainy season<br>Very high humidity ✗</td>
+            <td class="cell-autumn">15–24°C<br>Pleasant, clear<br>Low humidity</td>
+            <td class="cell-winter">5–12°C<br>Mild, some rain<br>Medium humidity</td>
+          </tr>
+          <tr>
+            <td>Okinawa</td>
+            <td class="cell-spring">20–26°C<br>Warm, some rain<br>Medium humidity</td>
+            <td class="cell-summer">29–33°C<br>Hot, typhoon risk<br>High humidity</td>
+            <td class="cell-autumn cell-good">23–29°C<br>Warm, clearer<br>Medium humidity ✦</td>
+            <td class="cell-winter cell-good">15–20°C<br>Mild, dry<br>Low humidity ✦</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px; color:var(--text3); margin-top:-1rem; margin-bottom:2rem;">✦ = Recommended season for that region &nbsp;·&nbsp; ✗ = Generally uncomfortable due to heat/humidity</p>
+
+    <div class="tip-box">
+      <p><strong>Local tip:</strong> Kyoto and Osaka in July and August are genuinely uncomfortable — temperatures regularly exceed 35°C with very high humidity. If you're visiting the Kansai region, spring or autumn are far more enjoyable. Many Japanese people avoid travelling to Kyoto in August for this reason.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Crowds — Japan's <em>national holidays</em> to know.</h2>
+    <p>Climate is only one factor. Crowds matter just as much — especially in Japan, where national holidays create periods of intense domestic travel. During these times, popular tourist spots, transport, and accommodation can become extremely busy and expensive.</p>
+    <p>Here are Japan's main national holidays and holiday periods that affect travel significantly.</p>
+
+    <!-- Holiday Table -->
+    <div class="table-wrap">
+      <table class="holiday-table">
+        <thead>
+          <tr>
+            <th>Period</th>
+            <th>Dates</th>
+            <th>What it is</th>
+            <th>Impact on travel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="holiday-warn">
+            <td>New Year (Oshogatsu)</td>
+            <td>Dec 28 – Jan 4</td>
+            <td>Japan's most important holiday. Families gather, shrines are packed for hatsumode (first shrine visit).</td>
+            <td>Very high domestic travel. Trains and flights fully booked. Many restaurants and shops closed Jan 1–3.</td>
+          </tr>
+          <tr>
+            <td>Coming of Age Day</td>
+            <td>2nd Mon of January</td>
+            <td>National holiday for those turning 20. Ceremonies held nationwide.</td>
+            <td>Minor impact on travel.</td>
+          </tr>
+          <tr>
+            <td>Spring Equinox</td>
+            <td>Around Mar 20–21</td>
+            <td>National holiday. Often coincides with cherry blossom season.</td>
+            <td>Moderate increase in day-trippers to parks and gardens.</td>
+          </tr>
+          <tr class="holiday-warn">
+            <td>Golden Week</td>
+            <td>Apr 29 – May 5</td>
+            <td>Japan's busiest holiday period. Multiple national holidays in a row: Showa Day, Constitution Day, Greenery Day, Children's Day.</td>
+            <td>Extremely busy nationwide. Highest prices of the year. Avoid popular tourist spots unless you plan far ahead.</td>
+          </tr>
+          <tr>
+            <td>Marine Day</td>
+            <td>3rd Mon of July</td>
+            <td>National holiday celebrating the ocean.</td>
+            <td>Beaches get crowded, especially in Shonan (near Tokyo) and Okinawa.</td>
+          </tr>
+          <tr>
+            <td>Mountain Day</td>
+            <td>August 11</td>
+            <td>National holiday appreciating mountains.</td>
+            <td>Popular hiking spots like Mt Fuji and the Japan Alps get busier.</td>
+          </tr>
+          <tr class="holiday-warn">
+            <td>Obon</td>
+            <td>Around Aug 13–16</td>
+            <td>Buddhist holiday when families return to hometowns to honour ancestors. Not an official public holiday but treated as one by most companies.</td>
+            <td>Very high travel. Trains, highways, and flights extremely busy. Rural areas and hometowns crowded; some tourist areas emptier than usual.</td>
+          </tr>
+          <tr>
+            <td>Respect for the Aged Day</td>
+            <td>3rd Mon of September</td>
+            <td>National holiday honouring elderly citizens.</td>
+            <td>Minor impact on travel.</td>
+          </tr>
+          <tr>
+            <td>Autumn Equinox</td>
+            <td>Around Sep 22–23</td>
+            <td>National holiday. Often a long weekend.</td>
+            <td>Moderate increase in domestic travel, especially to scenic spots.</td>
+          </tr>
+          <tr class="holiday-warn">
+            <td>Silver Week</td>
+            <td>Mid-September (some years)</td>
+            <td>When Respect for the Aged Day and Autumn Equinox fall in the same week, a five-day holiday can form. Does not happen every year.</td>
+            <td>When it occurs: similar impact to Golden Week. Worth checking in advance.</td>
+          </tr>
+          <tr>
+            <td>Sports Day</td>
+            <td>2nd Mon of October</td>
+            <td>National holiday promoting sport and healthy living.</td>
+            <td>Minor impact. Outdoor spots slightly busier.</td>
+          </tr>
+          <tr>
+            <td>Culture Day</td>
+            <td>November 3</td>
+            <td>National holiday celebrating Japanese culture and arts. Museum entry is often free.</td>
+            <td>Good day to visit museums. Kyoto and Nara in early November are beautiful — but already busy for autumn foliage.</td>
+          </tr>
+          <tr>
+            <td>Labour Thanksgiving Day</td>
+            <td>November 23</td>
+            <td>National holiday. Equivalent to Labour Day.</td>
+            <td>Minor impact. Sometimes creates a long weekend in late November.</td>
+          </tr>
+          <tr class="holiday-warn">
+            <td>Year-End (Nenmatsu)</td>
+            <td>Dec 25 – Jan 3</td>
+            <td>Not an official holiday period, but most Japanese companies close between Dec 28 and Jan 4. The country essentially shuts down.</td>
+            <td>High domestic travel Dec 28–30 and Jan 2–4. Many local restaurants and shops closed. Major temples and shrines extremely crowded on Jan 1.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip-box">
+      <p><strong>Local tip:</strong> The two periods to most avoid if you dislike crowds are <strong>Golden Week (late April to early May)</strong> and <strong>Obon (mid-August)</strong>. Transport prices spike and popular spots become genuinely overwhelming. If your dates overlap with these periods, focus on rural areas and lesser-known destinations instead — they're often quieter during domestic holiday seasons.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>My honest <em>conclusion.</em></h2>
+    <p>Of course, the best time to visit Japan ultimately depends on your purpose — what you want to see, where you want to go, and what kind of experience you're looking for. The information above is here to help you make a more informed decision and have a more comfortable trip.</p>
+    <p>I'll continue sharing honest, first-hand insights like this. If there's a topic you'd like me to cover, <strong><a href="mailto:persona.travel.jp@gmail.com" style="color:var(--coral); text-decoration:none;">send me an email</a></strong> — I'd love to hear from you.</p>
+
+    <div class="author-box">
+      <div class="author-icon"><i class="ti ti-user"></i></div>
+      <div>
+        <div class="author-name">Written by a Japanese local</div>
+        <div class="author-bio">Born and raised in Japan. I've spent years exploring all 47 prefectures and sharing honest, first-hand knowledge with travellers who want more than the standard tourist trail. Every guide I create is built around your interests, your timing, and the Japan you actually want to see.</div>
+      </div>
+    </div>
+
+    <div class="article-cta">
+      <h3>Want spots chosen <em>for your timing?</em></h3>
+      <p>Tell us when you're visiting and what you love — a Japanese local will hand-pick the perfect spots for your trip.</p>
+      <a class="btn-primary" href="/index.html">See our plans →</a>
+      <a class="btn-outline" href="/blog.html">More articles →</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">My <em>Japan</em> Trip</div>
+  <div class="footer-links">
+    <a href="/index.html">Home</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/index.html">Plans</a>
+    <a href="/index.html">FAQ</a>
+  </div>
+  <div class="footer-copy">© 2026 My Japan Trip — All rights reserved</div>
+</footer>
+
+</body>
+</html>

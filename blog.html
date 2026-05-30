@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — My Japan Trip</title>
+  <meta name="description" content="Insider tips and local knowledge about travelling Japan — written by a Japanese local. Hidden gems, seasonal guides, regional travel advice and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --coral: #993C1D; --coral-light: #FAECE7; --coral-dark: #712B13;
+      --ink: #2C2C2A; --bg: #E8E0D0; --bg2: #DDD5C4;
+      --text: #2C2C2A; --text2: #5F5E5A; --text3: #888780; --border: rgba(0,0,0,0.1);
+    }
+    body { font-family: 'Cormorant Garamond', Georgia, serif; color: var(--text); background: var(--bg); font-size: 18px; line-height: 1.6; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; border-bottom: 0.5px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { font-size: 18px; letter-spacing: 0.08em; text-decoration: none; color: var(--text); }
+    .nav-logo em { font-style: italic; color: var(--coral); }
+    .nav-links { display: flex; gap: 2rem; font-size: 13px; letter-spacing: 0.06em; }
+    .nav-links a { text-decoration: none; color: var(--text2); }
+    .nav-links a:hover, .nav-links a.active { color: var(--coral); }
+    .nav-cta { padding: 7px 20px; border: 0.5px solid var(--coral); color: var(--coral); font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.08em; text-decoration: none; }
+    .nav-cta:hover { background: var(--coral-light); }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 2rem; }
+    .label { font-size: 10px; letter-spacing: 0.18em; color: var(--coral); text-transform: uppercase; margin-bottom: 0.4rem; }
+    .divider { width: 40px; height: 0.5px; background: var(--coral); opacity: 0.5; margin: 1rem 0; }
+
+    /* Blog header */
+    .blog-header { padding: 4rem 0 3rem; border-bottom: 0.5px solid var(--border); }
+    .blog-header h1 { font-size: 42px; font-weight: 300; margin-bottom: 0.5rem; }
+    .blog-header h1 em { font-style: italic; color: var(--coral); }
+    .blog-header p { font-size: 15px; color: var(--text2); font-weight: 300; }
+
+    /* Featured article */
+    .featured { padding: 3rem 0; border-bottom: 0.5px solid var(--border); }
+    .featured-label { font-size: 10px; letter-spacing: 0.18em; color: var(--coral); text-transform: uppercase; margin-bottom: 1.5rem; }
+    .featured-card { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .featured-img { background: var(--bg2); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; border: 0.5px solid var(--border); }
+    .featured-img-inner { text-align: center; color: var(--text3); }
+    .featured-img-inner i { font-size: 48px; color: var(--coral); opacity: 0.4; display: block; margin-bottom: 0.5rem; }
+    .featured-img-inner span { font-size: 12px; letter-spacing: 0.08em; }
+    .featured-meta { font-size: 12px; color: var(--text3); letter-spacing: 0.06em; margin-bottom: 0.8rem; }
+    .featured-meta span { margin-right: 1rem; }
+    .featured-title { font-size: 28px; font-weight: 300; line-height: 1.3; margin-bottom: 0.8rem; }
+    .featured-title em { font-style: italic; color: var(--coral); }
+    .featured-excerpt { font-size: 14px; color: var(--text2); font-weight: 300; line-height: 1.8; margin-bottom: 1.5rem; }
+    .btn-read { display: inline-block; padding: 9px 28px; border: 0.5px solid var(--coral); color: var(--coral); font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.08em; text-decoration: none; }
+    .btn-read:hover { background: var(--coral-light); }
+
+    /* Article grid */
+    .articles-section { padding: 3rem 0; }
+    .articles-section h2 { font-size: 22px; font-weight: 300; margin-bottom: 2rem; }
+    .articles-section h2 em { font-style: italic; color: var(--coral); }
+    .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
+    .article-card { border: 0.5px solid var(--border); background: var(--bg); }
+    .article-card-img { background: var(--bg2); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-bottom: 0.5px solid var(--border); }
+    .article-card-img i { font-size: 32px; color: var(--coral); opacity: 0.3; }
+    .article-card-body { padding: 1.2rem; }
+    .article-card-tag { font-size: 10px; letter-spacing: 0.12em; color: var(--coral); text-transform: uppercase; margin-bottom: 0.4rem; }
+    .article-card-title { font-size: 17px; font-weight: 400; line-height: 1.4; margin-bottom: 0.5rem; }
+    .article-card-excerpt { font-size: 12px; color: var(--text2); font-weight: 300; line-height: 1.7; margin-bottom: 1rem; }
+    .article-card-meta { font-size: 11px; color: var(--text3); display: flex; justify-content: space-between; align-items: center; }
+    .article-card a { text-decoration: none; color: var(--coral); font-size: 12px; letter-spacing: 0.04em; }
+    .article-card a:hover { text-decoration: underline; }
+
+    /* Coming soon card */
+    .coming-soon { border: 0.5px dashed var(--border); background: var(--bg2); display: flex; align-items: center; justify-content: center; min-height: 200px; }
+    .coming-soon p { font-size: 13px; color: var(--text3); letter-spacing: 0.06em; font-style: italic; }
+
+    /* CTA */
+    .blog-cta { padding: 3rem 0; border-top: 0.5px solid var(--border); text-align: center; }
+    .blog-cta h2 { font-size: 26px; font-weight: 300; margin-bottom: 0.5rem; }
+    .blog-cta h2 em { font-style: italic; color: var(--coral); }
+    .blog-cta p { font-size: 14px; color: var(--text2); font-weight: 300; margin-bottom: 1.5rem; }
+    .btn-primary { display: inline-block; padding: 10px 32px; border: 0.5px solid var(--coral); background: var(--coral); color: var(--coral-light); font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.1em; text-decoration: none; }
+    .btn-primary:hover { background: var(--coral-dark); }
+
+    footer { padding: 2rem 3rem; border-top: 0.5px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-size: 16px; letter-spacing: 0.08em; }
+    .footer-logo em { font-style: italic; color: var(--coral); }
+    .footer-links { display: flex; gap: 1.5rem; font-size: 12px; color: var(--text3); }
+    .footer-links a { text-decoration: none; color: inherit; }
+    .footer-links a:hover { color: var(--coral); }
+    .footer-copy { font-size: 11px; color: var(--text3); }
+
+    @media (max-width: 640px) {
+      nav { padding: 1rem 1.2rem; }
+      .nav-links { display: none; }
+      .featured-card { grid-template-columns: 1fr; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/index.html">My <em>Japan</em> Trip</a>
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/index.html#plans">Plans</a>
+    <a href="/blog.html" class="active">Blog</a>
+    <a href="/index.html">About</a>
+    <a href="/index.html">FAQ</a>
+  </div>
+  <a class="nav-cta" href="/index.html">Get your guide</a>
+</nav>
+
+<div style="padding: 3rem 0 0;">
+  <div class="container">
+    <div class="blog-header">
+      <p class="label">Local knowledge · Insider tips</p>
+      <h1>The <em>Real Japan</em> Blog.</h1>
+      <div class="divider"></div>
+      <p>Written by a Japanese local. No generic advice — just honest, first-hand knowledge about travelling Japan the right way.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Featured Article -->
+<div class="featured">
+  <div class="container">
+    <p class="featured-label">Latest article</p>
+    <div class="featured-card">
+      <div class="featured-img">
+        <div class="featured-img-inner">
+          <i class="ti ti-map-pin"></i>
+          <span>Japan · Regional Guide</span>
+        </div>
+      </div>
+      <div class="featured-content">
+        <div class="featured-meta">
+          <span><i class="ti ti-calendar" style="font-size:12px; vertical-align:-1px;"></i> May 2026</span>
+          <span><i class="ti ti-clock" style="font-size:12px; vertical-align:-1px;"></i> 8 min read</span>
+        </div>
+        <h2 class="featured-title">The best time to visit Japan — <em>by region.</em></h2>
+        <p class="featured-excerpt">Everyone talks about cherry blossom season. But Japan is stunning year-round — and the best time to visit depends entirely on where you're going. Here's what a Japanese local actually recommends.</p>
+        <a class="btn-read" href="/blog-best-time-japan.html">Read article →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Articles Grid -->
+<div class="articles-section">
+  <div class="container">
+    <h2>More from the <em>blog.</em></h2>
+    <div class="articles-grid">
+
+      <div class="article-card">
+        <div class="article-card-img"><i class="ti ti-torii"></i></div>
+        <div class="article-card-body">
+          <div class="article-card-tag">Hidden gems</div>
+          <div class="article-card-title">Top 10 hidden shrines in Kyoto locals actually love</div>
+          <div class="article-card-excerpt">Skip Fushimi Inari on weekends. Here are the shrines Kyoto residents actually visit — and how to find them.</div>
+          <div class="article-card-meta"><span>Coming soon</span></div>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-card-img"><i class="ti ti-building"></i></div>
+        <div class="article-card-body">
+          <div class="article-card-tag">Local tips</div>
+          <div class="article-card-title">5 things only Japanese locals know about Tokyo</div>
+          <div class="article-card-excerpt">The neighbourhoods, the food spots, the unwritten rules. What guidebooks never tell you about Japan's capital.</div>
+          <div class="article-card-meta"><span>Coming soon</span></div>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-card-img"><i class="ti ti-book"></i></div>
+        <div class="article-card-body">
+          <div class="article-card-tag">Culture</div>
+          <div class="article-card-title">Why most Japan travel guides get it wrong</div>
+          <div class="article-card-excerpt">The same 10 spots. The same "hidden gems" that aren't hidden anymore. Here's how to actually travel Japan differently.</div>
+          <div class="article-card-meta"><span>Coming soon</span></div>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-card-img"><i class="ti ti-trees"></i></div>
+        <div class="article-card-body">
+          <div class="article-card-tag">Regional guide</div>
+          <div class="article-card-title">Beyond Tokyo & Kyoto — the best of rural Japan</div>
+          <div class="article-card-excerpt">Tohoku, San'in, Shikoku. The regions most visitors never reach — and why they're worth it.</div>
+          <div class="article-card-meta"><span>Coming soon</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="blog-cta">
+  <div class="container">
+    <h2>Want a guide made <em>just for you?</em></h2>
+    <p>Everything on this blog is free. But if you want a personalised selection of spots curated by a Japanese local — that's what we do.</p>
+    <a class="btn-primary" href="/index.html">See our plans →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">My <em>Japan</em> Trip</div>
+  <div class="footer-links">
+    <a href="/index.html">Home</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/index.html">Plans</a>
+    <a href="/index.html">FAQ</a>
+  </div>
+  <div class="footer-copy">© 2026 My Japan Trip — All rights reserved</div>
+</footer>
+
+</body>
+</html>
