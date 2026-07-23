@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Japan Trip — Personalised Japan Travel Guides by a Local</title>
+  <meta name="description" content="Get a personalised Japan travel guide handcrafted by a Japanese local. Not AI — real insider knowledge of shrines, hidden gems, food, and culture across all 47 prefectures." />
+  <meta property="og:title" content="My Japan Trip — Personalised Japan Travel Guides by a Local" />
+  <meta property="og:description" content="Handcrafted Japan travel guides by a Japanese local. Hidden gems, shrines, food, culture — curated just for you. Not AI." />
+  <meta property="og:url" content="https://myjapantrip.net" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://myjapantrip.net" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "My Japan Trip",
+    "url": "https://myjapantrip.net",
+    "description": "Personalised Japan travel guides handcrafted by a Japanese local.",
+    "offers": [
+      {"@type": "Offer", "name": "Basic Plan", "price": "25", "priceCurrency": "USD"},
+      {"@type": "Offer", "name": "Standard Plan", "price": "40", "priceCurrency": "USD"},
+      {"@type": "Offer", "name": "Premium Plan", "price": "60", "priceCurrency": "USD"},
+      {"@type": "Offer", "name": "Plan Review", "price": "15", "priceCurrency": "USD"}
+    ]
+  }
+  </script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3V970Z7XW2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3V970Z7XW2');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+JP:wght@300;400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --coral:       #8B3A1F;
+      --coral-light: #F5EDE8;
+      --coral-mid:   #C4724A;
+      --coral-dark:  #5C2210;
+      --ink:         #1A1916;
+      --ink2:        #3D3B36;
+      --ink3:        #6B6860;
+      --sand:        #EDE5D8;
+      --sand2:       #E3D9CA;
+      --sand3:       #D5C9B8;
+      --white:       #FAF7F2;
+      --border:      rgba(90,80,60,0.15);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 3rem; height: 64px;
+      background: rgba(250,247,242,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; letter-spacing: 0.05em; cursor: pointer; text-decoration: none; color: var(--ink); }
+    .nav-logo em { font-style: italic; color: var(--coral); }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { font-size: 13px; letter-spacing: 0.04em; color: var(--ink3); text-decoration: none; cursor: pointer; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--coral); }
+    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .nav-cta {
+      padding: 8px 22px;
+      background: var(--coral);
+      color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px; letter-spacing: 0.06em;
+      text-decoration: none; cursor: pointer;
+      border: none; transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--coral-dark); }
+    .lang-switcher { position: relative; }
+    .lang-btn { background: none; border: 0.5px solid var(--border); font-family: 'Inter', sans-serif; font-size: 12px; color: var(--ink3); padding: 5px 10px; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+    .lang-btn:hover { border-color: var(--coral); color: var(--coral); }
+    .lang-dropdown { display: none; position: absolute; right: 0; top: calc(100% + 6px); background: var(--white); border: 0.5px solid var(--border); min-width: 170px; z-index: 300; box-shadow: 0 8px 30px rgba(0,0,0,0.1); max-height: 300px; overflow-y: auto; }
+    .lang-dropdown.open { display: block; }
+    .lang-option { display: block; padding: 9px 14px; font-size: 13px; color: var(--ink3); cursor: pointer; }
+    .lang-option:hover, .lang-option.active { background: var(--coral-light); color: var(--coral); }
+
+    /* ── HERO ── */
+    .hero {
+      margin-top: 64px;
+      min-height: calc(100vh - 64px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 5rem 4rem 5rem 5rem;
+      background: var(--white);
+      position: relative; z-index: 1;
+    }
+    .hero-eyebrow {
+      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--coral); margin-bottom: 1.5rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .hero-eyebrow::before { content: ''; display: block; width: 24px; height: 0.5px; background: var(--coral); }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 4.5vw, 64px);
+      font-weight: 300; line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+    .hero h1 em { font-style: italic; color: var(--coral); }
+    .hero-sub {
+      font-size: 16px; color: var(--ink3); font-weight: 300;
+      line-height: 1.7; margin-bottom: 0.6rem; max-width: 420px;
+    }
+    .hero-jp {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 12px; color: var(--ink3); letter-spacing: 0.12em;
+      margin-bottom: 2.5rem; opacity: 0.7;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+    .btn-primary {
+      display: inline-block; padding: 13px 32px;
+      background: var(--coral); color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px; letter-spacing: 0.08em;
+      text-decoration: none; cursor: pointer; border: none;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--coral-dark); }
+    .btn-outline {
+      display: inline-block; padding: 13px 32px;
+      border: 1px solid var(--coral); color: var(--coral);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px; letter-spacing: 0.08em;
+      text-decoration: none; cursor: pointer; background: none;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { background: var(--coral-light); }
+    .hero-trust { display: flex; gap: 2rem; }
+    .hero-trust-item { }
+    .hero-trust-num { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--coral); line-height: 1; }
+    .hero-trust-label { font-size: 11px; color: var(--ink3); letter-spacing: 0.04em; margin-top: 3px; }
+    .hero-right {
+      position: relative; overflow: hidden;
+    }
+    .hero-img {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block;
+    }
+    .hero-img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(250,247,242,0.3) 0%, rgba(250,247,242,0) 40%);
+    }
+    .hero-badge {
+      position: absolute; bottom: 2rem; left: 2rem;
+      background: rgba(250,247,242,0.95);
+      padding: 1rem 1.4rem;
+      border-left: 2px solid var(--coral);
+      max-width: 240px;
+    }
+    .hero-badge-text { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-style: italic; color: var(--ink2); line-height: 1.5; }
+    .hero-badge-sub { font-size: 11px; color: var(--ink3); margin-top: 4px; letter-spacing: 0.04em; }
+
+    /* ── SECTIONS ── */
+    .section { padding: 6rem 0; }
+    .section-alt { background: var(--sand); }
+    .section-dark { background: var(--ink); color: var(--white); }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 3rem; }
+    .section-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.8rem; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 3.5vw, 46px); font-weight: 300; line-height: 1.2; margin-bottom: 1rem; }
+    .section-title em { font-style: italic; color: var(--coral); }
+    .section-body { font-size: 15px; color: var(--ink3); font-weight: 300; line-height: 1.8; max-width: 560px; }
+    .section-dark .section-body { color: rgba(255,255,255,0.6); }
+    .divider { height: 0.5px; background: var(--border); margin: 3rem 0; }
+
+    /* ── HOW IT WORKS ── */
+    .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 3rem; }
+    .step { padding: 2rem 1.5rem; border-right: 0.5px solid var(--border); position: relative; }
+    .step:last-child { border-right: none; }
+    .step-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; color: var(--coral); opacity: 0.3; line-height: 1; margin-bottom: 0.8rem; }
+    .step-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 400; margin-bottom: 0.5rem; }
+    .step-body { font-size: 13px; color: var(--ink3); line-height: 1.7; font-weight: 300; }
+
+    /* ── PLANS ── */
+    .plans-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); margin-top: 3rem; }
+    .plan-card { background: var(--white); padding: 2rem 1.6rem; position: relative; transition: box-shadow 0.2s; }
+    .plan-card:hover { box-shadow: 0 8px 40px rgba(0,0,0,0.08); z-index: 1; }
+    .plan-card.featured { background: var(--ink); color: var(--white); }
+    .plan-badge { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 10px; display: inline-block; margin-bottom: 1rem; }
+    .plan-badge-popular { background: var(--coral); color: var(--white); }
+    .plan-badge-new { background: var(--ink); color: var(--white); }
+    .plan-card.featured .plan-badge-popular { background: var(--coral-mid); }
+    .plan-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; margin-bottom: 0.3rem; }
+    .plan-price { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 300; color: var(--coral); line-height: 1; margin-bottom: 0.5rem; }
+    .plan-card.featured .plan-price { color: var(--coral-mid); }
+    .plan-price sup { font-size: 20px; vertical-align: super; }
+    .plan-spots { font-size: 12px; color: var(--ink3); margin-bottom: 1.5rem; padding-bottom: 1.2rem; border-bottom: 0.5px solid var(--border); }
+    .plan-card.featured .plan-spots { color: rgba(255,255,255,0.5); border-color: rgba(255,255,255,0.1); }
+    .plan-features { list-style: none; margin: 0 0 1.8rem; }
+    .plan-features li { font-size: 13px; color: var(--ink3); padding: 6px 0; border-bottom: 0.5px solid var(--border); display: flex; gap: 8px; font-weight: 300; line-height: 1.4; }
+    .plan-card.featured .plan-features li { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.1); }
+    .plan-features li:last-child { border-bottom: none; }
+    .plan-features i { color: var(--coral); font-size: 14px; margin-top: 1px; flex-shrink: 0; }
+    .plan-card.featured .plan-features i { color: var(--coral-mid); }
+    .plan-btn {
+      display: block; width: 100%; padding: 11px;
+      border: 1px solid var(--coral); background: none; color: var(--coral);
+      font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.06em;
+      text-decoration: none; text-align: center; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .plan-btn:hover { background: var(--coral); color: var(--white); }
+    .plan-card.featured .plan-btn { background: var(--coral); color: var(--white); border-color: var(--coral); }
+    .plan-card.featured .plan-btn:hover { background: var(--coral-dark); }
+    .plan-note { font-size: 13px; color: var(--ink3); text-align: center; margin-top: 1.5rem; }
+
+    /* ── EMAIL SUPPORT ── */
+    .support-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); margin-top: 3rem; }
+    .support-card { background: var(--sand); padding: 2rem; }
+    .support-plan { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.8rem; }
+    .support-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; margin-bottom: 0.4rem; }
+    .support-num em { font-style: italic; color: var(--coral); }
+    .support-body { font-size: 13px; color: var(--ink3); font-weight: 300; line-height: 1.7; }
+
+    /* ── COMPARISON TABLE ── */
+    .compare-wrap { overflow-x: auto; margin-top: 2.5rem; }
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .compare-table th { padding: 12px 16px; text-align: center; font-weight: 400; font-size: 13px; border-bottom: 1.5px solid var(--coral); }
+    .compare-table th:first-child { text-align: left; color: var(--ink3); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+    .compare-table th.featured-col { background: var(--ink); color: var(--white); }
+    .compare-table td { padding: 10px 16px; border-bottom: 0.5px solid var(--border); text-align: center; color: var(--ink3); font-weight: 300; }
+    .compare-table td:first-child { text-align: left; color: var(--ink); font-weight: 400; }
+    .compare-table td.featured-col { background: rgba(26,25,22,0.04); }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .check { color: var(--coral); font-size: 16px; }
+    .dash { color: var(--border); }
+
+    /* ── WHY US ── */
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); margin-top: 3rem; }
+    .why-card { background: var(--white); padding: 2.5rem 2rem; }
+    .why-icon { font-size: 28px; color: var(--coral); margin-bottom: 1rem; display: block; }
+    .why-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; margin-bottom: 0.6rem; }
+    .why-body { font-size: 14px; color: var(--ink3); font-weight: 300; line-height: 1.8; }
+
+    /* ── PHOTO GRID ── */
+    .photo-section { padding: 0; }
+    .photo-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 280px 280px; gap: 2px; }
+    .photo-cell { overflow: hidden; position: relative; }
+    .photo-cell:first-child { grid-row: 1 / 3; }
+    .photo-cell img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; display: block; }
+    .photo-cell:hover img { transform: scale(1.04); }
+    .photo-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 1.5rem 1.2rem 1rem;
+      background: linear-gradient(to top, rgba(26,25,22,0.7) 0%, transparent 100%);
+      color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px; font-style: italic; font-weight: 300;
+    }
+
+    /* ── ABOUT ── */
+    .about-split { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .about-img-wrap { position: relative; }
+    .about-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+    .about-img-accent { position: absolute; bottom: -1.5rem; right: -1.5rem; width: 120px; height: 120px; background: var(--coral-light); border: 0.5px solid var(--coral); display: flex; align-items: center; justify-content: center; }
+    .about-img-accent-text { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-style: italic; color: var(--coral); text-align: center; line-height: 1.4; padding: 0.5rem; }
+    .about-content p { font-size: 15px; color: var(--ink3); font-weight: 300; line-height: 1.9; margin-bottom: 1.2rem; }
+    .about-content p strong { font-weight: 500; color: var(--ink); }
+    .about-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; }
+    .about-tag { font-size: 11px; padding: 4px 12px; border: 0.5px solid var(--border); color: var(--ink3); letter-spacing: 0.04em; }
+
+    /* ── FAQ ── */
+    .faq-list { margin-top: 2.5rem; }
+    .faq-item { border-bottom: 0.5px solid var(--border); }
+    .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0; cursor: pointer; gap: 1rem; }
+    .faq-q-text { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; line-height: 1.4; }
+    .faq-icon { font-size: 18px; color: var(--coral); flex-shrink: 0; transition: transform 0.2s; }
+    .faq-icon.open { transform: rotate(45deg); }
+    .faq-a { font-size: 14px; color: var(--ink3); font-weight: 300; line-height: 1.9; padding: 0 0 1.2rem; display: none; max-width: 680px; }
+    .faq-a.open { display: block; }
+    .faq-a strong { font-weight: 500; color: var(--ink); }
+
+    /* ── BLOG ── */
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); margin-top: 3rem; }
+    .blog-card { background: var(--white); overflow: hidden; }
+    .blog-img { aspect-ratio: 16/9; overflow: hidden; }
+    .blog-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; display: block; }
+    .blog-card:hover .blog-img img { transform: scale(1.04); }
+    .blog-body { padding: 1.5rem; }
+    .blog-tag { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.5rem; }
+    .blog-title { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 400; line-height: 1.4; margin-bottom: 0.5rem; }
+    .blog-excerpt { font-size: 13px; color: var(--ink3); font-weight: 300; line-height: 1.7; margin-bottom: 1rem; }
+    .blog-link { font-size: 12px; color: var(--coral); text-decoration: none; letter-spacing: 0.04em; }
+    .blog-link:hover { text-decoration: underline; }
+
+    /* ── CTA BAND ── */
+    .cta-band { background: var(--coral); padding: 5rem 3rem; text-align: center; }
+    .cta-band h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 300; color: var(--white); margin-bottom: 0.8rem; }
+    .cta-band h2 em { font-style: italic; }
+    .cta-band p { font-size: 15px; color: rgba(255,255,255,0.75); font-weight: 300; margin-bottom: 2rem; }
+    .btn-white { display: inline-block; padding: 13px 36px; background: var(--white); color: var(--coral); font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.08em; text-decoration: none; cursor: pointer; border: none; transition: opacity 0.2s; }
+    .btn-white:hover { opacity: 0.9; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--ink); color: rgba(255,255,255,0.5); padding: 3rem; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; max-width: 1080px; margin: 0 auto; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--white); letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+    .footer-logo em { font-style: italic; color: var(--coral-mid); }
+    .footer-tagline { font-size: 12px; color: rgba(255,255,255,0.4); }
+    .footer-links { display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-links a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; cursor: pointer; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-contact a { color: var(--coral-mid); text-decoration: none; font-size: 13px; }
+    .footer-bottom { max-width: 1080px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 0.5px solid rgba(255,255,255,0.1); font-size: 12px; color: rgba(255,255,255,0.3); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+
+    /* ── PAGE SYSTEM ── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ── QUESTIONNAIRE ── */
+    .q-wrap { max-width: 680px; margin: 0 auto; padding: 5rem 3rem; }
+    .q-plan-badge { display: inline-block; font-size: 12px; letter-spacing: 0.08em; background: var(--coral-light); color: var(--coral); padding: 5px 14px; margin-bottom: 2rem; }
+    .q-progress { display: flex; gap: 4px; margin-bottom: 3rem; }
+    .q-progress-bar { height: 2px; flex: 1; background: var(--border); transition: background 0.3s; }
+    .q-progress-bar.active { background: var(--coral); }
+    .q-section { margin-bottom: 2.5rem; }
+    .q-section-label { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.5rem; }
+    .q-section h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; margin-bottom: 1.2rem; }
+    .q-field { margin-bottom: 1.2rem; }
+    .q-label { font-size: 13px; color: var(--ink3); margin-bottom: 0.5rem; display: block; font-weight: 300; }
+    .q-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { display: inline-block; padding: 7px 16px; border: 0.5px solid var(--border); font-family: 'Inter', sans-serif; font-size: 13px; cursor: pointer; background: var(--white); color: var(--ink); transition: all 0.15s; }
+    .chip.selected { border-color: var(--coral); background: var(--coral-light); color: var(--coral); }
+    .chip:hover:not(.selected) { background: var(--sand); }
+    .q-input, .q-textarea { width: 100%; padding: 10px 14px; border: 0.5px solid var(--border); background: var(--white); font-family: 'Inter', sans-serif; font-size: 14px; color: var(--ink); outline: none; transition: border-color 0.15s; }
+    .q-input:focus, .q-textarea:focus { border-color: var(--coral); }
+    .q-textarea { resize: vertical; min-height: 100px; }
+    .q-submit { width: 100%; padding: 14px; border: none; background: var(--coral); color: var(--white); font-family: 'Cormorant Garamond', serif; font-size: 16px; letter-spacing: 0.1em; cursor: pointer; margin-top: 1rem; transition: background 0.2s; }
+    .q-submit:hover { background: var(--coral-dark); }
+    .q-note { font-size: 12px; color: var(--ink3); text-align: center; margin-top: 0.8rem; }
+
+    /* ── TERMS ── */
+    .terms-wrap { max-width: 720px; margin: 0 auto; padding: 5rem 3rem; }
+    .terms-section { margin-bottom: 2.5rem; }
+    .terms-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; margin-bottom: 0.8rem; }
+    .terms-section p { font-size: 14px; color: var(--ink3); line-height: 1.9; font-weight: 300; margin-bottom: 0.8rem; }
+    .terms-section p strong { font-weight: 500; color: var(--ink); }
+    .terms-highlight { background: var(--coral-light); border-left: 2px solid var(--coral); padding: 1rem 1.4rem; margin: 1rem 0; }
+    .terms-highlight p { font-size: 14px; color: var(--coral-dark); margin: 0; }
+    .terms-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 1rem 0; }
+    .terms-table th { text-align: left; font-weight: 500; color: var(--ink3); font-size: 11px; letter-spacing: 0.08em; padding: 8px 12px; border-bottom: 0.5px solid var(--border); text-transform: uppercase; }
+    .terms-table td { padding: 10px 12px; border-bottom: 0.5px solid var(--border); color: var(--ink3); font-weight: 300; vertical-align: top; line-height: 1.6; }
+    .terms-table td:first-child { font-weight: 500; color: var(--ink); }
+
+    /* ── SAMPLE PDF ── */
+    .pdf-wrap { max-width: 600px; margin: 3rem auto 0; }
+    .pdf-cover { background: var(--ink); color: var(--white); padding: 3rem 2.5rem; text-align: center; }
+    .pdf-cover-kamon { font-size: 28px; color: var(--coral-mid); opacity: 0.8; margin-bottom: 1rem; }
+    .pdf-cover-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; margin-bottom: 0.4rem; }
+    .pdf-cover-title em { font-style: italic; color: var(--coral-mid); }
+    .pdf-cover-sub { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 1.2rem; }
+    .pdf-cover-badge { display: inline-block; border: 0.5px solid var(--coral-mid); color: var(--coral-mid); font-size: 11px; padding: 4px 14px; letter-spacing: 0.1em; }
+    .pdf-body { background: var(--white); padding: 2rem 2.5rem; }
+    .pdf-intro { font-size: 13px; color: var(--ink3); font-style: italic; line-height: 1.9; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 0.5px solid var(--border); }
+    .pdf-spot { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 0.5px solid var(--border); }
+    .pdf-spot:last-of-type { border-bottom: none; }
+    .pdf-spot-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.4rem; }
+    .pdf-spot-num { font-size: 10px; letter-spacing: 0.12em; color: var(--coral); }
+    .pdf-spot-cat { font-size: 10px; background: var(--sand); padding: 2px 8px; color: var(--ink3); }
+    .pdf-spot-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; margin-bottom: 0.2rem; }
+    .pdf-spot-jp { font-size: 12px; color: var(--ink3); margin-bottom: 0.6rem; letter-spacing: 0.06em; }
+    .pdf-spot-desc { font-size: 13px; color: var(--ink3); font-weight: 300; line-height: 1.8; margin-bottom: 0.8rem; }
+    .pdf-spot-meta { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    .pdf-spot-meta span { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--ink3); }
+    .pdf-spot-meta i { font-size: 13px; color: var(--coral); }
+    .pdf-tip { background: var(--coral-light); padding: 8px 12px; margin-top: 0.6rem; }
+    .pdf-tip p { font-size: 11px; color: var(--coral-dark); margin: 0; line-height: 1.6; }
+    .pdf-blur { filter: blur(5px); opacity: 0.35; pointer-events: none; user-select: none; }
+    .pdf-unlock { text-align: center; padding: 2rem; border-top: 0.5px solid var(--border); }
+    .pdf-unlock p { font-size: 14px; color: var(--ink3); font-weight: 300; margin-bottom: 1rem; }
+    .pdf-unlock p em { font-style: italic; color: var(--coral); }
+
+    /* ── PAYMENT PAGE ── */
+    .payment-wrap { max-width: 900px; margin: 0 auto; padding: 5rem 3rem; }
+    .payment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .pay-selector { display: flex; gap: 4px; margin-bottom: 2rem; }
+    .pay-sel-btn { flex: 1; padding: 8px 4px; border: 0.5px solid var(--border); background: var(--white); font-family: 'Inter', sans-serif; font-size: 13px; cursor: pointer; color: var(--ink3); transition: all 0.15s; }
+    .pay-sel-btn.active { border-color: var(--coral); color: var(--coral); background: var(--coral-light); }
+    .pay-plan-name { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; margin-bottom: 0.3rem; }
+    .pay-plan-name em { font-style: italic; color: var(--coral); }
+    .pay-plan-price { font-family: 'Cormorant Garamond', serif; font-size: 46px; font-weight: 300; color: var(--coral); line-height: 1; margin-bottom: 1.5rem; }
+    .pay-plan-price span { font-size: 20px; }
+    .pay-features { list-style: none; border-top: 0.5px solid var(--border); padding-top: 1rem; }
+    .pay-features li { font-size: 13px; color: var(--ink3); padding: 6px 0; display: flex; gap: 8px; font-weight: 300; border-bottom: 0.5px solid var(--border); }
+    .pay-features li:last-child { border-bottom: none; }
+    .pay-features i { color: var(--coral); font-size: 14px; margin-top: 1px; flex-shrink: 0; }
+    .pay-right { display: flex; flex-direction: column; gap: 1rem; }
+    .pay-field-label { font-size: 11px; letter-spacing: 0.08em; color: var(--ink3); margin-bottom: 4px; display: block; text-transform: uppercase; }
+    .pay-input { width: 100%; padding: 10px 12px; border: 0.5px solid var(--border); background: var(--white); font-family: 'Inter', sans-serif; font-size: 14px; color: var(--ink); outline: none; transition: border-color 0.15s; }
+    .pay-input:focus { border-color: var(--coral); }
+    .pay-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .pay-card-icons { display: flex; gap: 4px; margin-top: 6px; }
+    .pay-card-icon { font-size: 10px; color: var(--ink3); border: 0.5px solid var(--border); padding: 2px 6px; }
+    .pay-btn { width: 100%; padding: 13px; border: none; background: var(--coral); color: var(--white); font-family: 'Cormorant Garamond', serif; font-size: 16px; letter-spacing: 0.08em; cursor: pointer; transition: background 0.2s; }
+    .pay-btn:hover { background: var(--coral-dark); }
+    .pay-secure { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--ink3); justify-content: center; }
+    .pay-policy { font-size: 11px; color: var(--ink3); text-align: center; line-height: 1.6; }
+    .pay-policy a { color: var(--coral); cursor: pointer; text-decoration: underline; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 1.2rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 3rem 1.5rem; }
+      .hero-right { height: 280px; }
+      .container { padding: 0 1.5rem; }
+      .section { padding: 4rem 0; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .plans-grid { grid-template-columns: 1fr 1fr; }
+      .support-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .photo-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .photo-cell:first-child { grid-row: auto; }
+      .about-split { grid-template-columns: 1fr; gap: 3rem; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .payment-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; }
+      .footer-bottom { flex-direction: column; }
+      .hero-trust { gap: 1.2rem; }
+      .q-wrap, .terms-wrap, .payment-wrap { padding: 3rem 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .plans-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a class="nav-logo" onclick="showPage('home')">My <em>Japan</em> Trip</a>
+  <div class="nav-links">
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('plans')">Plans</a>
+    <a onclick="showPage('sample')">Sample guide</a>
+    <a onclick="showPage('about')">About</a>
+    <a onclick="showPage('faq')">FAQ</a>
+    <a href="/blog.html">Blog</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn" onclick="toggleLangDropdown()">
+        <i class="ti ti-world"></i>
+        <span id="current-lang-label">EN</span>
+        <i class="ti ti-chevron-down" style="font-size:10px;"></i>
+      </button>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <div class="lang-option active" data-lang="en" onclick="setLang('en')">English</div>
+        <div class="lang-option" data-lang="zh-CN" onclick="setLang('zh-CN')">中文（简体）</div>
+        <div class="lang-option" data-lang="zh-TW" onclick="setLang('zh-TW')">中文（繁體）</div>
+        <div class="lang-option" data-lang="ko" onclick="setLang('ko')">한국어</div>
+        <div class="lang-option" data-lang="th" onclick="setLang('th')">ภาษาไทย</div>
+        <div class="lang-option" data-lang="fr" onclick="setLang('fr')">Français</div>
+        <div class="lang-option" data-lang="es" onclick="setLang('es')">Español</div>
+        <div class="lang-option" data-lang="de" onclick="setLang('de')">Deutsch</div>
+        <div class="lang-option" data-lang="it" onclick="setLang('it')">Italiano</div>
+      </div>
+    </div>
+    <a class="nav-cta" onclick="showPage('plans')">Get your guide</a>
+  </div>
+</nav>
+
+<!-- ═══ HOME PAGE ═══ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Japanese local · Not AI</div>
+      <h1>Your <em>Japan,</em><br>handcrafted.</h1>
+      <p class="hero-sub">Personalised travel spots curated by a Japanese local who truly knows Japan — beyond the guidebooks, beyond the tourist trail.</p>
+      <p class="hero-jp">日本を知り尽くした日本人が、あなただけの旅をつくります。</p>
+      <div class="hero-actions">
+        <a class="btn-primary" onclick="showPage('plans')">See our plans →</a>
+        <a class="btn-outline" onclick="showPage('sample')">View sample guide</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <div class="hero-trust-num">100%</div>
+          <div class="hero-trust-label">Human-curated</div>
+        </div>
+        <div class="hero-trust-item">
+          <div class="hero-trust-num">47</div>
+          <div class="hero-trust-label">Prefectures covered</div>
+        </div>
+        <div class="hero-trust-item">
+          <div class="hero-trust-num">No AI</div>
+          <div class="hero-trust-label">Real local knowledge</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img class="hero-img" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1200&q=80" alt="Torii gates in Japan" loading="eager" />
+      <div class="hero-img-overlay"></div>
+      <div class="hero-badge">
+        <div class="hero-badge-text">"The Japan I know isn't in any guidebook."</div>
+        <div class="hero-badge-sub">— Your Japanese local curator</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO GRID -->
+  <div class="photo-section">
+    <div class="photo-grid">
+      <div class="photo-cell">
+        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=900&q=80" alt="Kyoto temple path" loading="lazy" />
+        <div class="photo-label">Kyoto — beyond the crowds</div>
+      </div>
+      <div class="photo-cell">
+        <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=80" alt="Mount Fuji Japan" loading="lazy" />
+        <div class="photo-label">Fuji — at dawn</div>
+      </div>
+      <div class="photo-cell">
+        <img src="https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&q=80" alt="Tokyo street Japan" loading="lazy" />
+        <div class="photo-label">Tokyo — the real side</div>
+      </div>
+      <div class="photo-cell">
+        <img src="https://images.unsplash.com/photo-1578469645742-46cae010e5d4?w=600&q=80" alt="Japanese shrine" loading="lazy" />
+        <div class="photo-label">Shrines — hidden in the mountains</div>
+      </div>
+      <div class="photo-cell">
+        <img src="https://images.unsplash.com/photo-1553984840-b8cbc34f5215?w=600&q=80" alt="Japanese food ramen" loading="lazy" />
+        <div class="photo-label">Food — where locals eat</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-alt">
+    <div class="container">
+      <p class="section-label">How it works</p>
+      <h2 class="section-title">Five steps to your <em>perfect guide.</em></h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-title">Choose your plan</div>
+          <div class="step-body">Select Basic, Standard, Premium, or Plan Review based on your needs.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-title">Tell us about you</div>
+          <div class="step-body">Fill in a short questionnaire — interests, travel style, season, and visited places.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-title">We handcraft your guide</div>
+          <div class="step-body">A Japanese local reads your answers and personally selects every spot.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-title">Receive your PDF</div>
+          <div class="step-body">Your beautifully designed guide arrives in your inbox within 3–5 business days.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">05</div>
+          <div class="step-title">Ask your questions</div>
+          <div class="step-body">Email your curator directly. Real answers from a real local — not a chatbot.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Our difference</p>
+      <h2 class="section-title">Not an algorithm.<br><em>A human.</em></h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <i class="ti ti-user why-icon"></i>
+          <div class="why-title">Japanese locals only</div>
+          <div class="why-body">Our curator grew up in Japan. They know the back alleys, the off-season temples, the neighbourhood izakayas that never make it online.</div>
+        </div>
+        <div class="why-card">
+          <i class="ti ti-map-pin why-icon"></i>
+          <div class="why-title">All 47 prefectures</div>
+          <div class="why-body">From Hokkaido's forests to Okinawa's shores — well beyond Tokyo and Kyoto. We love recommending places most visitors never find.</div>
+        </div>
+        <div class="why-card">
+          <i class="ti ti-heart why-icon"></i>
+          <div class="why-title">Truly personalised</div>
+          <div class="why-body">Your questionnaire shapes every recommendation. No generic lists — only spots matched to your interests, season, and travel style.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS PREVIEW -->
+  <section class="section section-alt">
+    <div class="container">
+      <p class="section-label">Plans & pricing</p>
+      <h2 class="section-title">Choose your <em>journey.</em></h2>
+      <p class="section-body" style="margin-bottom:0;">All plans cover all of Japan. Delivered as a beautifully designed PDF within 3–5 business days.</p>
+      <div class="plans-grid">
+        <div class="plan-card">
+          <div class="plan-name">Basic</div>
+          <div class="plan-price"><sup>$</sup>25</div>
+          <div class="plan-spots"><strong>10</strong> hand-picked spots · Nationwide</div>
+          <ul class="plan-features">
+            <li><i class="ti ti-check"></i>Curated by a Japanese local</li>
+            <li><i class="ti ti-check"></i>Shrines, temples & hidden gems</li>
+            <li><i class="ti ti-check"></i>PDF guide delivery</li>
+            <li><i class="ti ti-check"></i>Email support · up to 3 questions</li>
+            <li><i class="ti ti-check"></i>Based on your questionnaire</li>
+          </ul>
+          <a class="plan-btn" href="https://buy.stripe.com/dRmeV75FP5VI3ni9pNgw007" target="_blank">Get Basic · $25</a>
+        </div>
+        <div class="plan-card featured">
+          <div class="plan-badge plan-badge-popular">Most popular</div>
+          <div class="plan-name">Standard</div>
+          <div class="plan-price"><sup>$</sup>40</div>
+          <div class="plan-spots"><strong>20</strong> hand-picked spots · Nationwide</div>
+          <ul class="plan-features">
+            <li><i class="ti ti-check"></i>Curated by a Japanese local</li>
+            <li><i class="ti ti-check"></i>Shrines, temples & hidden gems</li>
+            <li><i class="ti ti-check"></i>Seasonal tips & local notes</li>
+            <li><i class="ti ti-check"></i>PDF guide delivery</li>
+            <li><i class="ti ti-check"></i>Email support · up to 10 questions</li>
+            <li><i class="ti ti-check"></i>Based on your questionnaire</li>
+          </ul>
+          <a class="plan-btn" href="https://buy.stripe.com/3cI6oB0lv83Qga445tgw008" target="_blank">Get Standard · $40</a>
+        </div>
+        <div class="plan-card">
+          <div class="plan-name">Premium</div>
+          <div class="plan-price"><sup>$</sup>60</div>
+          <div class="plan-spots"><strong>30</strong> hand-picked spots · Nationwide</div>
+          <ul class="plan-features">
+            <li><i class="ti ti-check"></i>Curated by a Japanese local</li>
+            <li><i class="ti ti-check"></i>Shrines, temples & hidden gems</li>
+            <li><i class="ti ti-check"></i>Deep cultural context per spot</li>
+            <li><i class="ti ti-check"></i>Seasonal tips & local notes</li>
+            <li><i class="ti ti-check"></i>PDF guide delivery</li>
+            <li><i class="ti ti-check"></i>Email support · unlimited</li>
+            <li><i class="ti ti-check"></i>Based on your questionnaire</li>
+          </ul>
+          <a class="plan-btn" href="https://buy.stripe.com/6oUcMZ7NXbg20b66dBgw009" target="_blank">Get Premium · $60</a>
+        </div>
+        <div class="plan-card" style="border-top: 2px dashed var(--coral);">
+          <div class="plan-badge plan-badge-new">New</div>
+          <div class="plan-name">Plan Review</div>
+          <div class="plan-price"><sup>$</sup>15</div>
+          <div class="plan-spots">Already have a plan? <strong>Let a local review it.</strong></div>
+          <ul class="plan-features">
+            <li><i class="ti ti-check"></i>Submit your existing itinerary</li>
+            <li><i class="ti ti-check"></i>Detailed feedback & improvements</li>
+            <li><i class="ti ti-check"></i>Hidden gems you may have missed</li>
+            <li><i class="ti ti-check"></i>Crowd & timing advice</li>
+            <li><i class="ti ti-check"></i>Email support · 3 questions</li>
+            <li><i class="ti ti-check"></i>Delivered within 3–5 business days</li>
+          </ul>
+          <a class="plan-btn" href="https://buy.stripe.com/4gMfZb9W5abY0b6gSfgw006" target="_blank">Get Plan Review · $15</a>
+        </div>
+      </div>
+      <p class="plan-note"><i class="ti ti-clock"></i> Delivered within 3–5 business days after your questionnaire is submitted.</p>
+    </div>
+  </section>
+
+  <!-- EMAIL SUPPORT -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Email support</p>
+      <h2 class="section-title">Questions after your guide? <em>We're here.</em></h2>
+      <p class="section-body">Every plan includes direct email support with your Japanese local curator. Ask about specific spots, seasonal timing, or anything about your trip.</p>
+      <div class="support-grid">
+        <div class="support-card">
+          <div class="support-plan">Basic · $25</div>
+          <div class="support-num">Up to <em>3</em> questions</div>
+          <div class="support-body">Perfect for a focused trip. Ask the questions that matter most to you.</div>
+        </div>
+        <div class="support-card" style="background: var(--sand2);">
+          <div class="support-plan">Standard · $40</div>
+          <div class="support-num">Up to <em>10</em> questions</div>
+          <div class="support-body">Ideal for longer trips. Dig into the details on multiple spots and regions.</div>
+        </div>
+        <div class="support-card" style="background: var(--sand3);">
+          <div class="support-plan">Premium · $60</div>
+          <div class="support-num"><em>Unlimited</em> questions</div>
+          <div class="support-body">Total peace of mind. Ask as much as you need — your curator is with you.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section class="section section-alt">
+    <div class="container">
+      <p class="section-label">From the blog</p>
+      <h2 class="section-title">Local knowledge, <em>shared freely.</em></h2>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="Japan seasons" loading="lazy" />
+          </div>
+          <div class="blog-body">
+            <div class="blog-tag">Regional guide</div>
+            <div class="blog-title">Best time to visit Japan — by region</div>
+            <div class="blog-excerpt">The honest answer depends entirely on where you're going. A Japanese local breaks it down.</div>
+            <a class="blog-link" href="/blog-best-time-japan.html">Read article →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img" style="background: var(--sand2); display:flex; align-items:center; justify-content:center; aspect-ratio:16/9;">
+            <i class="ti ti-torii" style="font-size:48px; color:var(--coral); opacity:0.3;"></i>
+          </div>
+          <div class="blog-body">
+            <div class="blog-tag">Hidden gems</div>
+            <div class="blog-title">Hidden shrines in Kyoto locals actually love</div>
+            <div class="blog-excerpt">Skip Fushimi Inari on weekends. Here are the shrines Kyoto residents visit.</div>
+            <span class="blog-link" style="color:var(--ink3); cursor:default;">Coming soon</span>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img" style="background: var(--sand3); display:flex; align-items:center; justify-content:center; aspect-ratio:16/9;">
+            <i class="ti ti-building" style="font-size:48px; color:var(--coral); opacity:0.3;"></i>
+          </div>
+          <div class="blog-body">
+            <div class="blog-tag">Local tips</div>
+            <div class="blog-title">5 things only Japanese locals know about Tokyo</div>
+            <div class="blog-excerpt">The neighbourhoods, the food spots, the unwritten rules. What guidebooks never tell you.</div>
+            <span class="blog-link" style="color:var(--ink3); cursor:default;">Coming soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <h2>Ready to discover <em>your</em> Japan?</h2>
+    <p>Handcrafted by a Japanese local. Starting from $15.</p>
+    <a class="btn-white" onclick="showPage('plans')">See our plans →</a>
+  </div>
+
+</div><!-- end home -->
+
+<!-- ═══ PLANS PAGE ═══ -->
+<div id="page-plans" class="page">
+  <div style="margin-top:64px; padding:5rem 0;" class="section">
+    <div class="container">
+      <p class="section-label">Plans & pricing</p>
+      <h1 class="section-title">Choose your <em>journey.</em></h1>
+      <p class="section-body" style="margin-bottom:0;">All plans cover all of Japan. Delivered as a PDF within 3–5 business days.</p>
+      <div class="plans-grid">
+        <div class="plan-card">
+          <div class="plan-name">Basic</div>
+          <div class="plan-price"><sup>$</sup>25</div>
+          <div class="plan-spots"><strong>10</strong> hand-picked spots · Nationwide</div>
+          <ul class="plan-features">
+            <li><i class="ti ti-check"></i>Curated by a Japanese local</li>
+            <li><i class="ti ti-check"></i>Shrines, temples & cultural sites</li>
+            <li><i class="ti ti-check"></i>Hidden gems included</li>
+            <li><i class="ti ti-check"></i>PDF guide delivery</li>
+            <li><i class="ti ti-check"></i>Based on your questionnaire</li>
+            <li><i class="ti ti-check"></i>Email support · up to 3 questions</li>
+          </ul>
+          <a class="plan-btn" href="https://buy.stripe.com/dRmeV75FP5VI3ni9pNgw007" target="_blank">Get Basic · $25</a>
+        </div>
+        <div class="plan-card featured">
+          <div class="plan-badge plan-badge-popular">Most popular</div>
+          <div class="plan-name">Standard</div>
+          <div class="plan-price"><sup>$</sup>40</div>
+          <div class="plan-spots"><strong>20</strong> hand-picked spots · Nationwide</div>
+          <ul class="plan-features">
+            <li><i class="ti ti-check"></i>Curated by a Japanese local</li>
+            <li><i class="ti ti-check"></i>Shrines, temples & cultural sites</li>
+            <li><i class="ti ti-check"></i>Hidden gems included</li>
+            <li><i class="ti ti-check"></i>Seasonal tips & local notes</li>
+            <li><i class="ti ti-check"></i>PDF guide delivery</li>
+            <li><i class="ti ti-check"></i>Based on your questionnaire</li>
+            <li><i class="ti ti-check"></i>Email support · up to 10 questions</li>
+          </ul>
+          <a class="plan-btn" href="https://buy.stripe.com/3cI6oB0lv83Qga445tgw008" target="_blank">Get Standard · $40</a>
+        </div>
+        <div class="plan-card">
+          <div class="plan-name">Premium</div>
+          <div class="plan-price"><sup>$</sup>60</div>
+          <div class="plan-spots"><strong>30</strong> hand-picked spots · Nationwide</div>
+          <ul class="plan-features">
+            <li><i class="ti ti-check"></i>Curated by a Japanese local</li>
+            <li><i class="ti ti-check"></i>Shrines, temples & cultural sites</li>
+            <li><i class="ti ti-check"></i>Hidden gems included</li>
+            <li><i class="ti ti-check"></i>Deep cultural context per spot</li>
+            <li><i class="ti ti-check"></i>Seasonal tips & local notes</li>
+            <li><i class="ti ti-check"></i>PDF guide delivery</li>
+            <li><i class="ti ti-check"></i>Based on your questionnaire</li>
+            <li><i class="ti ti-check"></i>Email support · unlimited</li>
+          </ul>
+          <a class="plan-btn" href="https://buy.stripe.com/6oUcMZ7NXbg20b66dBgw009" target="_blank">Get Premium · $60</a>
+        </div>
+        <div class="plan-card" style="border-top: 2px dashed var(--coral);">
+          <div class="plan-badge plan-badge-new">New</div>
+          <div class="plan-name">Plan Review</div>
+          <div class="plan-price"><sup>$</sup>15</div>
+          <div class="plan-spots">Already have a plan? <strong>Let a local review it.</strong></div>
+          <ul class="plan-features">
+            <li><i class="ti ti-check"></i>Submit your existing itinerary</li>
+            <li><i class="ti ti-check"></i>Detailed feedback & improvements</li>
+            <li><i class="ti ti-check"></i>Hidden gems you may have missed</li>
+            <li><i class="ti ti-check"></i>Crowd & timing advice</li>
+            <li><i class="ti ti-check"></i>Email support · 3 questions</li>
+            <li><i class="ti ti-check"></i>Delivered within 3–5 business days</li>
+          </ul>
+          <a class="plan-btn" href="https://buy.stripe.com/4gMfZb9W5abY0b6gSfgw006" target="_blank">Get Plan Review · $15</a>
+        </div>
+      </div>
+      <p class="plan-note"><i class="ti ti-clock"></i> Delivered within 3–5 business days after your questionnaire is submitted.</p>
+
+      <!-- Comparison Table -->
+      <div style="margin-top:4rem;">
+        <p class="section-label">Plan comparison</p>
+        <h2 class="section-title">Everything side by <em>side.</em></h2>
+        <div class="compare-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Basic<br><span style="color:var(--coral); font-size:16px; font-family:'Cormorant Garamond',serif;">$25</span></th>
+                <th class="featured-col">Standard<br><span style="color:var(--coral-mid); font-size:16px; font-family:'Cormorant Garamond',serif;">$40</span></th>
+                <th>Premium<br><span style="color:var(--coral); font-size:16px; font-family:'Cormorant Garamond',serif;">$60</span></th>
+                <th>Plan Review<br><span style="color:var(--coral); font-size:16px; font-family:'Cormorant Garamond',serif;">$15</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Hand-picked spots</td><td>10</td><td class="featured-col">20</td><td>30</td><td>—</td></tr>
+              <tr><td>Nationwide coverage</td><td><i class="ti ti-check check"></i></td><td class="featured-col"><i class="ti ti-check check"></i></td><td><i class="ti ti-check check"></i></td><td>—</td></tr>
+              <tr><td>Hidden gems</td><td><i class="ti ti-check check"></i></td><td class="featured-col"><i class="ti ti-check check"></i></td><td><i class="ti ti-check check"></i></td><td><i class="ti ti-check check"></i></td></tr>
+              <tr><td>Seasonal tips & local notes</td><td class="dash">—</td><td class="featured-col"><i class="ti ti-check check"></i></td><td><i class="ti ti-check check"></i></td><td><i class="ti ti-check check"></i></td></tr>
+              <tr><td>Deep cultural context</td><td class="dash">—</td><td class="featured-col dash">—</td><td><i class="ti ti-check check"></i></td><td class="dash">—</td></tr>
+              <tr><td>PDF guide delivery</td><td><i class="ti ti-check check"></i></td><td class="featured-col"><i class="ti ti-check check"></i></td><td><i class="ti ti-check check"></i></td><td class="dash">—</td></tr>
+              <tr><td>Itinerary review</td><td class="dash">—</td><td class="featured-col dash">—</td><td class="dash">—</td><td><i class="ti ti-check check"></i></td></tr>
+              <tr><td>Email support</td><td>3 questions</td><td class="featured-col">10 questions</td><td>Unlimited</td><td>3 questions</td></tr>
+              <tr><td>Delivery</td><td>3–5 days</td><td class="featured-col">3–5 days</td><td>3–5 days</td><td>3–5 days</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SAMPLE PAGE ═══ -->
+<div id="page-sample" class="page">
+  <div style="margin-top:64px;" class="section">
+    <div class="container">
+      <p class="section-label">Sample guide</p>
+      <h1 class="section-title">This is what you <em>receive.</em></h1>
+      <p class="section-body">A preview of your personalised PDF — beautifully formatted, ready to use offline.</p>
+      <div class="pdf-wrap">
+        <div class="pdf-cover">
+          <div class="pdf-cover-kamon">✦</div>
+          <div class="pdf-cover-title">Your <em>Japan</em> Guide</div>
+          <div class="pdf-cover-sub">Curated personally for Sarah · Standard Plan · Autumn 2025</div>
+          <div class="pdf-cover-badge">20 hand-picked spots</div>
+        </div>
+        <div class="pdf-body">
+          <p class="pdf-intro">"Sarah, here are the places I'd take a close friend who loves history, quiet temples, and the kind of food you can only find if you know where to look."</p>
+          <div class="pdf-spot">
+            <div class="pdf-spot-header"><span class="pdf-spot-num">Spot 01</span><span class="pdf-spot-cat">Shrine · Hidden gem</span></div>
+            <div class="pdf-spot-name">Kifune Shrine</div>
+            <div class="pdf-spot-jp">貴船神社 — Kibune, Kyoto</div>
+            <div class="pdf-spot-desc">Tucked into a cedar-lined valley north of Kyoto, Kifune is one of Japan's oldest shrines. In autumn the lanterns glow against red maple leaves; in summer the riverbed restaurants set their tables directly in the cool mountain stream.</div>
+            <div class="pdf-spot-meta">
+              <span><i class="ti ti-clock"></i> 6am – 8pm</span>
+              <span><i class="ti ti-train"></i> Eizan Railway to Kibuneguchi</span>
+              <span><i class="ti ti-leaf"></i> Best in autumn</span>
+            </div>
+            <div class="pdf-tip"><p><strong>Local tip:</strong> Arrive before 8am on weekdays to have the stone lantern path almost entirely to yourself.</p></div>
+          </div>
+          <div class="pdf-spot">
+            <div class="pdf-spot-header"><span class="pdf-spot-num">Spot 02</span><span class="pdf-spot-cat">Food · Local market</span></div>
+            <div class="pdf-spot-name">Nishiki Market — the back section</div>
+            <div class="pdf-spot-jp">錦市場（奥） — Nakagyo, Kyoto</div>
+            <div class="pdf-spot-desc">Everyone visits Nishiki Market. Almost nobody walks past the tourist-facing stalls into the quieter back half, where local vendors have sold pickles, tofu, and dried fish to Kyoto households for generations.</div>
+            <div class="pdf-spot-meta">
+              <span><i class="ti ti-clock"></i> 9am – 5pm</span>
+              <span><i class="ti ti-walk"></i> 5 min from Karasuma Oike</span>
+            </div>
+            <div class="pdf-tip"><p><strong>Local tip:</strong> Try the yuba (tofu skin) fresh from the small shop two-thirds of the way down on the left.</p></div>
+          </div>
+          <div class="pdf-spot pdf-blur">
+            <div class="pdf-spot-header"><span class="pdf-spot-num">Spot 03</span><span class="pdf-spot-cat">Nature · Scenic</span></div>
+            <div class="pdf-spot-name">████████████</div>
+            <div class="pdf-spot-jp">██████ — ████████</div>
+            <div class="pdf-spot-desc">████████████████████████████████████████████████████████████████████████</div>
+          </div>
+          <div class="pdf-unlock">
+            <p>Spots 3–20 are in <em>your personalised guide.</em></p>
+            <a class="btn-primary" onclick="showPage('plans')">Get your guide →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ABOUT PAGE ═══ -->
+<div id="page-about" class="page">
+  <div style="margin-top:64px;" class="section">
+    <div class="container">
+      <div class="about-split">
+        <div class="about-img-wrap">
+          <img class="about-img" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80" alt="Japan local scenery" loading="lazy" />
+          <div class="about-img-accent">
+            <div class="about-img-accent-text">Born &amp; raised<br>in Japan</div>
+          </div>
+        </div>
+        <div class="about-content">
+          <p class="section-label">The person behind your guide</p>
+          <h1 class="section-title">A Japanese <em>local.</em></h1>
+          <div class="about-tags" style="margin-bottom:2rem;">
+            <span class="about-tag">Japanese local</span>
+            <span class="about-tag">Not AI</span>
+            <span class="about-tag">Independent</span>
+            <span class="about-tag">47 prefectures</span>
+          </div>
+          <p>I've spent my whole life in Japan — visiting shrines tucked away in mountain forests, eating at tiny ramen shops with no English menu, watching festivals that don't make it onto any tourist list. I know Japan not from a guidebook, but from <strong>living it every day.</strong></p>
+          <p>When friends from abroad started asking me for travel advice, I noticed something: the information online was always the same. Tokyo, Kyoto, Osaka. The same familiar spots. The same recommended restaurants. <strong>The real Japan — the one I know — was invisible.</strong></p>
+          <p>My Japan Trip is my way of changing that. Every guide I create is a personal letter to a traveller, written with the same care I'd give a close friend visiting for the first time.</p>
+          <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+            <a class="btn-primary" onclick="showPage('plans')">See the plans →</a>
+            <a class="btn-outline" onclick="showPage('sample')">View sample guide</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FAQ PAGE ═══ -->
+<div id="page-faq" class="page">
+  <div style="margin-top:64px;" class="section">
+    <div class="container" style="max-width:760px;">
+      <p class="section-label">FAQ</p>
+      <h1 class="section-title">Frequently asked <em>questions.</em></h1>
+
+      <div class="faq-list">
+        <div style="margin-bottom:2rem;"><p class="section-label">About the service</p></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Is this made by AI or a real person?</span><i class="ti ti-plus faq-icon"></i></div><div class="faq-a"><strong>Every plan is handcrafted by a Japanese local — no AI involved.</strong> Real local knowledge and genuine passion for Japan cannot be replicated by an algorithm. Your curator was born and raised in Japan and personally selects each spot based on your questionnaire.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What kind of spots do you recommend?</span><i class="ti ti-plus faq-icon"></i></div><div class="faq-a">A mix of <strong>iconic landmarks and hidden gems</strong> — shrines, temples, historic neighbourhoods, local markets, scenic nature spots, and more. We do <strong>not</strong> recommend hotels or accommodation.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you cover all of Japan, or just Tokyo and Kyoto?</span><i class="ti ti-plus faq-icon"></i></div><div class="faq-a"><strong>All of Japan.</strong> From Hokkaido in the north to Okinawa in the south, including rural Tohoku, the hidden valleys of Shikoku, and the volcanic landscapes of Kyushu.</div></div>
+
+        <div style="margin:2rem 0 1rem;"><p class="section-label">Plans & pricing</p></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What is the difference between the plans?</span><i class="ti ti-plus faq-icon"></i></div><div class="faq-a">The main difference is <strong>number of spots and depth of information</strong>. Basic ($25) includes 10 spots. Standard ($40) includes 20 spots with seasonal tips. Premium ($60) includes 30 spots with deep cultural context. Plan Review ($15) is for reviewing an existing itinerary you've already made.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Can I upgrade my plan after purchasing?</span><i class="ti ti-plus faq-icon"></i></div><div class="faq-a">Yes, if you contact us before your guide is delivered. <strong>Upgrades are not possible after delivery.</strong></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you offer refunds?</span><i class="ti ti-plus faq-icon"></i></div><div class="faq-a">Full refund if you cancel <strong>before submitting your questionnaire</strong>. Once curation has begun, refunds are not available. If you're unhappy with your guide, please reach out — we're committed to making it right.</div></div>
+
+        <div style="margin:2rem 0 1rem;"><p class="section-label">Delivery & format</p></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How will I receive my guide?</span><i class="ti ti-plus faq-icon"></i></div><div class="faq-a">As a <strong>beautifully designed PDF</strong> sent to your email. Easy to save on your phone and access offline.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How long does it take?</span><i class="ti ti-plus faq-icon"></i></div><div class="faq-a">Within <strong>3–5 business days</strong> after questionnaire submission. This is not an instant automated service — we take time with every plan.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Is the guide in English?</span><i class="ti ti-plus faq-icon"></i></div><div class="faq-a">Yes, <strong>all guides are written in English.</strong> We also include the Japanese name and address for each spot.</div></div>
+
+        <div style="margin:2rem 0 1rem;"><p class="section-label">Other questions</p></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">I have dietary restrictions. Can you still help?</span><i class="ti ti-plus faq-icon"></i></div><div class="faq-a">Absolutely. Mention any dietary requirements or allergies in your questionnaire.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">I've already been to Japan. Is this still useful?</span><i class="ti ti-plus faq-icon"></i></div><div class="faq-a"><strong>Especially so.</strong> Tell us what you've already seen and we'll make sure every recommendation is somewhere new.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Who is behind My Japan Trip?</span><i class="ti ti-plus faq-icon"></i></div><div class="faq-a">An independent service run by a Japanese local. Every guide is made with care and genuine insider knowledge — not outsourced, not automated.</div></div>
+      </div>
+
+      <div style="text-align:center; margin-top:3rem; padding:2rem; background:var(--coral-light);">
+        <p style="font-size:15px; color:var(--ink3); margin-bottom:1rem;">Still have a question?</p>
+        <a href="mailto:persona.travel.jp@gmail.com" class="btn-primary" style="text-decoration:none;">Contact us → persona.travel.jp@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TERMS PAGE ═══ -->
+<div id="page-terms" class="page">
+  <div style="margin-top:64px;">
+    <div class="terms-wrap">
+      <p class="section-label">Legal</p>
+      <h1 class="section-title">Terms of service &amp; <em>refund policy.</em></h1>
+      <p style="font-size:13px; color:var(--ink3); margin-bottom:2rem;">Last updated: May 2026</p>
+      <div class="divider"></div>
+      <div class="terms-section"><p class="section-label">01</p><h2>About this service</h2><p>My Japan Trip is an independent, human-curated travel guide service operated by a sole proprietor based in Japan. This service does <strong>not</strong> provide accommodation recommendations, transportation booking, or travel agency services.</p></div>
+      <div class="divider"></div>
+      <div class="terms-section"><p class="section-label">02</p><h2>Plans & pricing</h2><table class="terms-table"><thead><tr><th>Plan</th><th>Description</th><th>Price</th></tr></thead><tbody><tr><td>Basic</td><td>10 curated spots</td><td>$25 USD</td></tr><tr><td>Standard</td><td>20 curated spots + seasonal tips</td><td>$40 USD</td></tr><tr><td>Premium</td><td>30 curated spots + deep cultural notes</td><td>$60 USD</td></tr><tr><td>Plan Review</td><td>Itinerary review + improvements</td><td>$15 USD</td></tr></tbody></table></div>
+      <div class="divider"></div>
+      <div class="terms-section"><p class="section-label">03</p><h2>Refund policy</h2><div class="terms-highlight"><p><strong>Before questionnaire submission:</strong> Full refund available with no questions asked.</p></div><table class="terms-table"><thead><tr><th>Situation</th><th>Refund</th></tr></thead><tbody><tr><td>Before questionnaire submitted</td><td>Full refund (100%)</td></tr><tr><td>After questionnaire submitted</td><td>No refund — curation has begun</td></tr><tr><td>After guide delivered</td><td>No refund — digital goods policy</td></tr><tr><td>Guide not received within 7 business days</td><td>Full refund or re-delivery</td></tr></tbody></table></div>
+      <div class="divider"></div>
+      <div class="terms-section"><p class="section-label">04</p><h2>Delivery</h2><p>Guides are delivered as PDF documents within <strong>3–5 business days</strong> of questionnaire submission (Monday–Friday, JST).</p></div>
+      <div class="divider"></div>
+      <div class="terms-section"><p class="section-label">05</p><h2>Intellectual property</h2><p>Your guide is for <strong>personal use only.</strong> It may not be resold, redistributed, or shared publicly.</p></div>
+      <div class="divider"></div>
+      <div class="terms-section"><p class="section-label">06</p><h2>Limitation of liability</h2><p>My Japan Trip provides recommendations in good faith. We are not responsible for changes in opening hours or accessibility after delivery. Always verify details locally before visiting.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ QUESTIONNAIRE PAGE ═══ -->
+<div id="page-questionnaire" class="page">
+  <div style="margin-top:64px;">
+    <div class="q-wrap">
+      <p class="section-label">Your personalisation</p>
+      <h1 class="section-title">Tell us about your <em>journey.</em></h1>
+      <p style="font-size:14px; color:var(--ink3); margin-bottom:2rem;">Your answers help our Japanese local curator hand-pick the perfect spots for you.</p>
+      <div class="q-plan-badge">Plan: Standard · 20 spots</div>
+      <div class="q-progress" id="q-progress"></div>
+      <div class="q-section"><p class="q-section-label">01 — About you</p><h3>Who's travelling?</h3><div class="q-field"><span class="q-label">Travelling with</span><div class="q-chips"><div class="chip" data-group="companion">Solo</div><div class="chip" data-group="companion">Couple</div><div class="chip" data-group="companion">Friends</div><div class="chip" data-group="companion">Family with kids</div><div class="chip" data-group="companion">Family (adults only)</div></div></div><div class="q-field"><span class="q-label">Travel style</span><div class="q-chips"><div class="chip" data-group="style">Active & adventurous</div><div class="chip" data-group="style">Slow & relaxed</div><div class="chip" data-group="style">Cultural immersion</div><div class="chip" data-group="style">Mix of everything</div></div></div></div>
+      <div class="divider"></div>
+      <div class="q-section"><p class="q-section-label">02 — Interests</p><h3>What excites you most?</h3><div class="q-field"><span class="q-label">Select all that apply</span><div class="q-chips"><div class="chip" data-group="interest">Shrines & temples</div><div class="chip" data-group="interest">Local food & markets</div><div class="chip" data-group="interest">Nature & hiking</div><div class="chip" data-group="interest">History & castles</div><div class="chip" data-group="interest">Arts & crafts</div><div class="chip" data-group="interest">Traditional festivals</div><div class="chip" data-group="interest">Onsen & wellness</div><div class="chip" data-group="interest">Hidden neighbourhoods</div><div class="chip" data-group="interest">Anime & pop culture</div><div class="chip" data-group="interest">Photography spots</div></div></div></div>
+      <div class="divider"></div>
+      <div class="q-section"><p class="q-section-label">03 — Timing</p><h3>When are you visiting?</h3><div class="q-field"><span class="q-label">Season</span><div class="q-chips"><div class="chip" data-group="season">Spring (Mar–May)</div><div class="chip" data-group="season">Summer (Jun–Aug)</div><div class="chip" data-group="season">Autumn (Sep–Nov)</div><div class="chip" data-group="season">Winter (Dec–Feb)</div><div class="chip" data-group="season">Not sure yet</div></div></div><div class="q-field"><span class="q-label">Approximate travel dates (optional)</span><input class="q-input" type="text" placeholder="e.g. late October 2025, around Golden Week…" /></div></div>
+      <div class="divider"></div>
+      <div class="q-section"><p class="q-section-label">04 — Past visits</p><h3>What have you already seen?</h3><div class="q-field"><span class="q-label">Places already visited</span><div class="q-chips"><div class="chip" data-group="visited">Tokyo</div><div class="chip" data-group="visited">Kyoto</div><div class="chip" data-group="visited">Osaka</div><div class="chip" data-group="visited">Nara</div><div class="chip" data-group="visited">Hiroshima</div><div class="chip" data-group="visited">Hokkaido</div><div class="chip" data-group="visited">Okinawa</div><div class="chip" data-group="visited">Tohoku</div><div class="chip" data-group="visited">Kyushu</div><div class="chip" data-group="visited">First visit to Japan</div></div></div><div class="q-field"><span class="q-label">Any specific regions you'd love to explore?</span><input class="q-input" type="text" placeholder="e.g. rural Tohoku, Shikoku, somewhere off the beaten path…" /></div></div>
+      <div class="divider"></div>
+      <div class="q-section"><p class="q-section-label">05 — Special notes</p><h3>Anything else we should know?</h3><div class="q-field"><span class="q-label">Dietary requirements or allergies</span><input class="q-input" type="text" placeholder="e.g. vegetarian, shellfish allergy, halal…" /></div><div class="q-field"><span class="q-label">Mobility or accessibility needs</span><input class="q-input" type="text" placeholder="e.g. wheelchair accessible, avoiding steep paths…" /></div><div class="q-field"><span class="q-label">Anything else you'd like your curator to know?</span><textarea class="q-textarea" placeholder="Dreams, must-sees, things you want to avoid, special occasions…"></textarea></div></div>
+      <button class="q-submit">Submit my questionnaire →</button>
+      <p class="q-note"><i class="ti ti-clock"></i> Your personalised guide will be delivered within 3–5 business days.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">My <em>Japan</em> Trip</div>
+      <div class="footer-tagline">Personalised Japan guides by a Japanese local.</div>
+    </div>
+    <div class="footer-links">
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('plans')">Plans</a>
+      <a onclick="showPage('sample')">Sample guide</a>
+      <a onclick="showPage('about')">About</a>
+      <a onclick="showPage('faq')">FAQ</a>
+      <a onclick="showPage('terms')">Terms & Refunds</a>
+      <a href="/blog.html">Blog</a>
+    </div>
+    <div class="footer-contact">
+      <div style="font-size:11px; color:rgba(255,255,255,0.4); margin-bottom:0.4rem; letter-spacing:0.08em; text-transform:uppercase;">Contact</div>
+      <a href="mailto:persona.travel.jp@gmail.com">persona.travel.jp@gmail.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 My Japan Trip — All rights reserved</span>
+    <span><a onclick="showPage('terms')" style="color:rgba(255,255,255,0.3); text-decoration:none; cursor:pointer;">Terms & Refund Policy</a></span>
+  </div>
+</footer>
+
+<script>
+  // ── NAV SCROLL ──
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // ── PAGE SYSTEM ──
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ── FAQ ──
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const icon = el.querySelector('.faq-icon');
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a.open').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-icon.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) { answer.classList.add('open'); icon.classList.add('open'); }
+  }
+
+  // ── QUESTIONNAIRE ──
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const group = chip.dataset.group;
+      const single = ['companion','style','season'];
+      if (single.includes(group)) document.querySelectorAll(`.chip[data-group="${group}"]`).forEach(c => c.classList.remove('selected'));
+      chip.classList.toggle('selected');
+      updateProgress();
+    });
+  });
+  function updateProgress() {
+    const groups = ['companion','style','interest','season','visited'];
+    const bars = document.getElementById('q-progress');
+    if (!bars) return;
+    bars.innerHTML = groups.map(g => {
+      const filled = document.querySelector(`.chip[data-group="${g}"].selected`);
+      return '<div class="q-progress-bar' + (filled ? ' active' : '') + '"></div>';
+    }).join('');
+  }
+  updateProgress();
+
+  // ── LANG SWITCHER ──
+  function toggleLangDropdown() {
+    document.getElementById('lang-dropdown').classList.toggle('open');
+  }
+  function setLang(lang) {
+    document.querySelectorAll('.lang-option').forEach(o => o.classList.toggle('active', o.dataset.lang === lang));
+    document.getElementById('current-lang-label').textContent = lang.toUpperCase().split('-')[0];
+    document.getElementById('lang-dropdown').classList.remove('open');
+  }
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.lang-switcher')) {
+      const dd = document.getElementById('lang-dropdown');
+      if (dd) dd.classList.remove('open');
+    }
+  });
+</script>
+
+</body>
+</html>
