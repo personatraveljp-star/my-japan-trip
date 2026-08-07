@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Refund Policy — My Japan Trip</title>
+  <meta name="description" content="Terms of service and refund policy for My Japan Trip personalised Japan travel guides." />
+  <link rel="canonical" href="https://myjapantrip.net/terms.html" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta property="og:title" content="Terms & Refund Policy — My Japan Trip" />
+  <meta property="og:description" content="Terms of service and refund policy for My Japan Trip personalised Japan travel guides." />
+  <meta property="og:url" content="https://myjapantrip.net/terms.html" />
+  <meta property="og:image" content="https://myjapantrip.net/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://myjapantrip.net/og-image.jpg" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3V970Z7XW2"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/tabler-icons.min.css" />
+  <style>
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --coral:       #8B3A1F;
+      --coral-light: #F5EDE8;
+      --coral-mid:   #C4724A;
+      --coral-dark:  #5C2210;
+      --ink:         #1A1916;
+      --ink2:        #3D3B36;
+      --ink3:        #6B6860;
+      --sand:        #EDE5D8;
+      --sand2:       #E3D9CA;
+      --sand3:       #D5C9B8;
+      --white:       #FAF7F2;
+      --border:      rgba(90,80,60,0.15);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 3rem; height: 64px;
+      background: rgba(250,247,242,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; letter-spacing: 0.05em; cursor: pointer; text-decoration: none; color: var(--ink); }
+    .nav-logo em { font-style: italic; color: var(--coral); }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { font-size: 13px; letter-spacing: 0.04em; color: var(--ink3); text-decoration: none; cursor: pointer; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--coral); }
+    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .nav-cta {
+      padding: 8px 22px;
+      background: var(--coral);
+      color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px; letter-spacing: 0.06em;
+      text-decoration: none; cursor: pointer;
+      border: none; transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--coral-dark); }
+
+
+
+
+    /* ── HERO ── */
+    .hero {
+      margin-top: 64px;
+      min-height: calc(100vh - 64px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 5rem 4rem 5rem 5rem;
+      background: var(--white);
+      position: relative; z-index: 1;
+    }
+    .hero-eyebrow {
+      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--coral); margin-bottom: 1.5rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .hero-eyebrow::before { content: ''; display: block; width: 24px; height: 0.5px; background: var(--coral); }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 4.5vw, 64px);
+      font-weight: 300; line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+    .hero h1 em { font-style: italic; color: var(--coral); }
+    .hero-sub {
+      font-size: 16px; color: var(--ink3); font-weight: 300;
+      line-height: 1.7; margin-bottom: 0.6rem; max-width: 420px;
+    }
+    .hero-jp {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 12px; color: var(--ink3); letter-spacing: 0.12em;
+      margin-bottom: 2.5rem; opacity: 0.7;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+    .btn-primary {
+      display: inline-block; padding: 13px 32px;
+      background: var(--coral); color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px; letter-spacing: 0.08em;
+      text-decoration: none; cursor: pointer; border: none;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--coral-dark); }
+    .btn-outline {
+      display: inline-block; padding: 13px 32px;
+      border: 1px solid var(--coral); color: var(--coral);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px; letter-spacing: 0.08em;
+      text-decoration: none; cursor: pointer; background: none;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { background: var(--coral-light); }
+    .hero-trust { display: flex; gap: 2rem; }
+    .hero-trust-item { }
+    .hero-trust-num { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--coral); line-height: 1; }
+    .hero-trust-label { font-size: 11px; color: var(--ink3); letter-spacing: 0.04em; margin-top: 3px; }
+    .hero-right {
+      position: relative; overflow: hidden;
+    }
+    .hero-img {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block;
+    }
+    .hero-img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(250,247,242,0.3) 0%, rgba(250,247,242,0) 40%);
+    }
+    .hero-badge {
+      position: absolute; bottom: 2rem; left: 2rem;
+      background: rgba(250,247,242,0.95);
+      padding: 1rem 1.4rem;
+      border-left: 2px solid var(--coral);
+      max-width: 240px;
+    }
+    .hero-badge-text { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-style: italic; color: var(--ink2); line-height: 1.5; }
+    .hero-badge-sub { font-size: 11px; color: var(--ink3); margin-top: 4px; letter-spacing: 0.04em; }
+
+    /* ── SECTIONS ── */
+    .section { padding: 6rem 0; }
+    .section-alt { background: var(--sand); }
+    .section-dark { background: var(--ink); color: var(--white); }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 3rem; }
+    .section-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.8rem; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 3.5vw, 46px); font-weight: 300; line-height: 1.2; margin-bottom: 1rem; }
+    .section-title em { font-style: italic; color: var(--coral); }
+    .section-body { font-size: 15px; color: var(--ink3); font-weight: 300; line-height: 1.8; max-width: 560px; }
+    .section-dark .section-body { color: rgba(255,255,255,0.6); }
+    .divider { height: 0.5px; background: var(--border); margin: 3rem 0; }
+
+    /* ── HOW IT WORKS ── */
+    .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 3rem; }
+    .step { padding: 2rem 1.5rem; border-right: 0.5px solid var(--border); position: relative; }
+    .step:last-child { border-right: none; }
+    .step-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; color: var(--coral); opacity: 0.3; line-height: 1; margin-bottom: 0.8rem; }
+    .step-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 400; margin-bottom: 0.5rem; }
+    .step-body { font-size: 13px; color: var(--ink3); line-height: 1.7; font-weight: 300; }
+
+    /* ── PLANS ── */
+    .plans-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); margin-top: 3rem; }
+    .plan-card { background: var(--white); padding: 2rem 1.6rem; position: relative; transition: box-shadow 0.2s; }
+    .plan-card:hover { box-shadow: 0 8px 40px rgba(0,0,0,0.08); z-index: 1; }
+    .plan-card.featured { background: var(--ink); color: var(--white); }
+    .plan-badge { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 10px; display: inline-block; margin-bottom: 1rem; }
+    .plan-badge-popular { background: var(--coral); color: var(--white); }
+    .plan-badge-new { background: var(--ink); color: var(--white); }
+    .plan-card.featured .plan-badge-popular { background: var(--coral-mid); }
+    .plan-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; margin-bottom: 0.3rem; }
+    .plan-price { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 300; color: var(--coral); line-height: 1; margin-bottom: 0.5rem; }
+    .plan-card.featured .plan-price { color: var(--coral-mid); }
+    .plan-price sup { font-size: 20px; vertical-align: super; }
+    .plan-spots { font-size: 12px; color: var(--ink3); margin-bottom: 1.5rem; padding-bottom: 1.2rem; border-bottom: 0.5px solid var(--border); }
+    .plan-card.featured .plan-spots { color: rgba(255,255,255,0.5); border-color: rgba(255,255,255,0.1); }
+    .plan-features { list-style: none; margin: 0 0 1.8rem; }
+    .plan-features li { font-size: 13px; color: var(--ink3); padding: 6px 0; border-bottom: 0.5px solid var(--border); display: flex; gap: 8px; font-weight: 300; line-height: 1.4; }
+    .plan-card.featured .plan-features li { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.1); }
+    .plan-features li:last-child { border-bottom: none; }
+    .plan-features i { color: var(--coral); font-size: 14px; margin-top: 1px; flex-shrink: 0; }
+    .plan-card.featured .plan-features i { color: var(--coral-mid); }
+    .plan-btn {
+      display: block; width: 100%; padding: 11px;
+      border: 1px solid var(--coral); background: none; color: var(--coral);
+      font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.06em;
+      text-decoration: none; text-align: center; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .plan-btn:hover { background: var(--coral); color: var(--white); }
+    .plan-card.featured .plan-btn { background: var(--coral); color: var(--white); border-color: var(--coral); }
+    .plan-card.featured .plan-btn:hover { background: var(--coral-dark); }
+    .plan-note { font-size: 13px; color: var(--ink3); text-align: center; margin-top: 1.5rem; }
+
+    /* ── EMAIL SUPPORT ── */
+    .support-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); margin-top: 3rem; }
+    .support-card { background: var(--sand); padding: 2rem; }
+    .support-plan { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.8rem; }
+    .support-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; margin-bottom: 0.4rem; }
+    .support-num em { font-style: italic; color: var(--coral); }
+    .support-body { font-size: 13px; color: var(--ink3); font-weight: 300; line-height: 1.7; }
+
+    /* ── COMPARISON TABLE ── */
+    .compare-wrap { overflow-x: auto; margin-top: 2.5rem; }
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .compare-table th { padding: 12px 16px; text-align: center; font-weight: 400; font-size: 13px; border-bottom: 1.5px solid var(--coral); }
+    .compare-table th:first-child { text-align: left; color: var(--ink3); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+    .compare-table th.featured-col { background: var(--ink); color: var(--white); }
+    .compare-table td { padding: 10px 16px; border-bottom: 0.5px solid var(--border); text-align: center; color: var(--ink3); font-weight: 300; }
+    .compare-table td:first-child { text-align: left; color: var(--ink); font-weight: 400; }
+    .compare-table td.featured-col { background: rgba(26,25,22,0.04); }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .check { color: var(--coral); font-size: 16px; }
+    .dash { color: var(--border); }
+
+    /* ── WHY US ── */
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); margin-top: 3rem; }
+    .why-card { background: var(--white); padding: 2.5rem 2rem; }
+    .why-icon { font-size: 28px; color: var(--coral); margin-bottom: 1rem; display: block; }
+    .why-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; margin-bottom: 0.6rem; }
+    .why-body { font-size: 14px; color: var(--ink3); font-weight: 300; line-height: 1.8; }
+
+    /* ── PHOTO GRID ── */
+    .photo-section { padding: 0; }
+    .photo-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 280px 280px; gap: 2px; }
+    .photo-cell { overflow: hidden; position: relative; }
+    .photo-cell:first-child { grid-row: 1 / 3; }
+    .photo-cell img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; display: block; }
+    .photo-cell:hover img { transform: scale(1.04); }
+    .photo-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 1.5rem 1.2rem 1rem;
+      background: linear-gradient(to top, rgba(26,25,22,0.7) 0%, transparent 100%);
+      color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px; font-style: italic; font-weight: 300;
+    }
+
+    /* ── ABOUT ── */
+    .about-split { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .about-img-wrap { position: relative; }
+    .about-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+    .about-img-accent { position: absolute; bottom: -1.5rem; right: -1.5rem; width: 120px; height: 120px; background: var(--coral-light); border: 0.5px solid var(--coral); display: flex; align-items: center; justify-content: center; }
+    .about-img-accent-text { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-style: italic; color: var(--coral); text-align: center; line-height: 1.4; padding: 0.5rem; }
+    .about-content p { font-size: 15px; color: var(--ink3); font-weight: 300; line-height: 1.9; margin-bottom: 1.2rem; }
+    .about-content p strong { font-weight: 500; color: var(--ink); }
+    .about-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; }
+    .about-tag { font-size: 11px; padding: 4px 12px; border: 0.5px solid var(--border); color: var(--ink3); letter-spacing: 0.04em; }
+
+    /* ── FAQ ── */
+    .faq-list { margin-top: 2.5rem; }
+    .faq-item { border-bottom: 0.5px solid var(--border); }
+    .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0; cursor: pointer; gap: 1rem; }
+    .faq-q-text { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; line-height: 1.4; }
+    .faq-icon { font-size: 18px; color: var(--coral); flex-shrink: 0; transition: transform 0.2s; }
+    .faq-icon.open { transform: rotate(45deg); }
+    .faq-a { font-size: 14px; color: var(--ink3); font-weight: 300; line-height: 1.9; padding: 0 0 1.2rem; display: none; max-width: 680px; }
+    .faq-a.open { display: block; }
+    .faq-a strong { font-weight: 500; color: var(--ink); }
+
+    /* ── BLOG ── */
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); margin-top: 3rem; }
+    .blog-card { background: var(--white); overflow: hidden; }
+    .blog-img { aspect-ratio: 16/9; overflow: hidden; }
+    .blog-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; display: block; }
+    .blog-card:hover .blog-img img { transform: scale(1.04); }
+    .blog-body { padding: 1.5rem; }
+    .blog-tag { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.5rem; }
+    .blog-title { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 400; line-height: 1.4; margin-bottom: 0.5rem; }
+    .blog-excerpt { font-size: 13px; color: var(--ink3); font-weight: 300; line-height: 1.7; margin-bottom: 1rem; }
+    .blog-link { font-size: 12px; color: var(--coral); text-decoration: none; letter-spacing: 0.04em; }
+    .blog-link:hover { text-decoration: underline; }
+
+    /* ── CTA BAND ── */
+    .cta-band { background: var(--coral); padding: 5rem 3rem; text-align: center; }
+    .cta-band h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 300; color: var(--white); margin-bottom: 0.8rem; }
+    .cta-band h2 em { font-style: italic; }
+    .cta-band p { font-size: 15px; color: rgba(255,255,255,0.75); font-weight: 300; margin-bottom: 2rem; }
+    .btn-white { display: inline-block; padding: 13px 36px; background: var(--white); color: var(--coral); font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.08em; text-decoration: none; cursor: pointer; border: none; transition: opacity 0.2s; }
+    .btn-white:hover { opacity: 0.9; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--ink); color: rgba(255,255,255,0.5); padding: 3rem; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; max-width: 1080px; margin: 0 auto; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--white); letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+    .footer-logo em { font-style: italic; color: var(--coral-mid); }
+    .footer-tagline { font-size: 12px; color: rgba(255,255,255,0.4); }
+    .footer-links { display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-links a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; cursor: pointer; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-contact a { color: var(--coral-mid); text-decoration: none; font-size: 13px; }
+    .footer-bottom { max-width: 1080px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 0.5px solid rgba(255,255,255,0.1); font-size: 12px; color: rgba(255,255,255,0.3); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+
+    /* ── PAGE SYSTEM ── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ── HAMBURGER MENU ── */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--ink); transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    .mobile-menu {
+      display: none; position: fixed; top: 64px; left: 0; right: 0;
+      background: var(--white); border-bottom: 0.5px solid var(--border);
+      padding: 1.5rem 2rem; z-index: 199; flex-direction: column; gap: 0;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      display: block; padding: 0.9rem 0; border-bottom: 0.5px solid var(--border);
+      font-size: 16px; color: var(--ink2); text-decoration: none; cursor: pointer;
+      letter-spacing: 0.04em; font-family: 'Cormorant Garamond', serif;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--coral); }
+    .mobile-menu-cta {
+      display: block; margin-top: 1rem; padding: 12px;
+      background: var(--coral); color: var(--white) !important; text-align: center;
+      font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.08em;
+      text-decoration: none; cursor: pointer; border-bottom: none !important;
+    }
+    .mobile-menu-cta:hover { background: var(--coral-dark) !important; }
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links { display: none !important; }
+      .nav-cta { display: none; }
+    }
+
+
+    /* ── SAMPLE PDF ── */
+    .pdf-wrap { max-width: 600px; margin: 3rem auto 0; }
+    .pdf-cover { background: var(--ink); color: var(--white); padding: 3rem 2.5rem; text-align: center; }
+    .pdf-cover-kamon { font-size: 28px; color: var(--coral-mid); opacity: 0.8; margin-bottom: 1rem; }
+    .pdf-cover-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; margin-bottom: 0.4rem; }
+    .pdf-cover-title em { font-style: italic; color: var(--coral-mid); }
+    .pdf-cover-sub { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 1.2rem; }
+    .pdf-cover-badge { display: inline-block; border: 0.5px solid var(--coral-mid); color: var(--coral-mid); font-size: 11px; padding: 4px 14px; letter-spacing: 0.1em; }
+    .pdf-body { background: var(--white); padding: 2rem 2.5rem; }
+    .pdf-intro { font-size: 13px; color: var(--ink3); font-style: italic; line-height: 1.9; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 0.5px solid var(--border); }
+    .pdf-spot { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 0.5px solid var(--border); }
+    .pdf-spot:last-of-type { border-bottom: none; }
+    .pdf-spot-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.4rem; }
+    .pdf-spot-num { font-size: 10px; letter-spacing: 0.12em; color: var(--coral); }
+    .pdf-spot-cat { font-size: 10px; background: var(--sand); padding: 2px 8px; color: var(--ink3); }
+    .pdf-spot-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; margin-bottom: 0.2rem; }
+    .pdf-spot-jp { font-size: 12px; color: var(--ink3); margin-bottom: 0.6rem; letter-spacing: 0.06em; }
+    .pdf-spot-desc { font-size: 13px; color: var(--ink3); font-weight: 300; line-height: 1.8; margin-bottom: 0.8rem; }
+    .pdf-spot-meta { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    .pdf-spot-meta span { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--ink3); }
+    .pdf-spot-meta i { font-size: 13px; color: var(--coral); }
+    .pdf-tip { background: var(--coral-light); padding: 8px 12px; margin-top: 0.6rem; }
+    .pdf-tip p { font-size: 11px; color: var(--coral-dark); margin: 0; line-height: 1.6; }
+    .pdf-blur { filter: blur(5px); opacity: 0.35; pointer-events: none; user-select: none; }
+    .pdf-unlock { text-align: center; padding: 2rem; border-top: 0.5px solid var(--border); }
+    .pdf-unlock p { font-size: 14px; color: var(--ink3); font-weight: 300; margin-bottom: 1rem; }
+    .pdf-unlock p em { font-style: italic; color: var(--coral); }
+
+
+    /* ── TERMS ── */
+    .terms-wrap { max-width: 720px; margin: 0 auto; padding: 5rem 3rem; }
+    .terms-section { margin-bottom: 2.5rem; }
+    .terms-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; margin-bottom: 0.8rem; }
+    .terms-section p { font-size: 14px; color: var(--ink3); line-height: 1.9; font-weight: 300; margin-bottom: 0.8rem; }
+    .terms-section p strong { font-weight: 500; color: var(--ink); }
+    .terms-highlight { background: var(--coral-light); border-left: 2px solid var(--coral); padding: 1rem 1.4rem; margin: 1rem 0; }
+    .terms-highlight p { font-size: 14px; color: var(--coral-dark); margin: 0; }
+    .terms-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 1rem 0; }
+    .terms-table th { text-align: left; font-weight: 500; color: var(--ink3); font-size: 11px; letter-spacing: 0.08em; padding: 8px 12px; border-bottom: 0.5px solid var(--border); text-transform: uppercase; }
+    .terms-table td { padding: 10px 12px; border-bottom: 0.5px solid var(--border); color: var(--ink3); font-weight: 300; vertical-align: top; line-height: 1.6; }
+    .terms-table td:first-child { font-weight: 500; color: var(--ink); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 1.2rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 3rem 1.5rem; }
+      .hero-right { height: 280px; }
+      .container { padding: 0 1.5rem; }
+      .section { padding: 4rem 0; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .plans-grid { grid-template-columns: 1fr 1fr; }
+      .support-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .photo-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .photo-cell:first-child { grid-row: auto; }
+      .about-split { grid-template-columns: 1fr; gap: 3rem; }
+      .blog-grid { grid-template-columns: 1fr; }
+
+      .footer-inner { flex-direction: column; }
+      .footer-bottom { flex-direction: column; }
+      .hero-trust { gap: 1.2rem; }
+      .terms-wrap { padding: 3rem 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .plans-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+    }
+
+
+
+
+  
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a class="nav-logo" href="/">My <em>Japan</em> Trip</a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/plans.html">Plans</a>
+    <a href="/sample.html">Sample guide</a>
+    <a href="/about.html">About</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/blog.html">Blog</a>
+  </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-right">
+
+    <a class="nav-cta" href="/plans.html"href="/plans.html">Get your guide</a>
+  </div>
+</nav>
+
+
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/">Home</a>
+  <a href="/plans.html">Plans</a>
+  <a href="/sample.html">Sample guide</a>
+  <a href="/about.html">About</a>
+  <a href="/faq.html">FAQ</a>
+  <a href="/terms.html">Terms & Refunds</a>
+  <a href="/blog.html">Blog</a>
+  <a class="mobile-menu-cta" href="/plans.html">Get your guide →</a>
+</div>
+
+<div style="margin-top:64px;">
+    <div class="terms-wrap">
+      <p class="section-label">Legal</p>
+      <h1 class="section-title">Terms of service &amp; <em>refund policy.</em></h1>
+      <p style="font-size:13px; color:var(--ink3); margin-bottom:2rem;">Last updated: May 2026</p>
+      <div class="divider"></div>
+      <div class="terms-section"><p class="section-label">01</p><h2>About this service</h2><p>My Japan Trip is an independent, human-curated travel guide service operated by a sole proprietor based in Japan. This service does <strong>not</strong> provide accommodation recommendations, transportation booking, or travel agency services.</p></div>
+      <div class="divider"></div>
+      <div class="terms-section"><p class="section-label">02</p><h2>Plans & pricing</h2><table class="terms-table"><thead><tr><th>Plan</th><th>Description</th><th>Price</th></tr></thead><tbody><tr><td>Basic</td><td>10 curated spots</td><td>$25 USD</td></tr><tr><td>Standard</td><td>20 curated spots + seasonal tips</td><td>$40 USD</td></tr><tr><td>Premium</td><td>30 curated spots + deep cultural notes</td><td>$60 USD</td></tr><tr><td>Plan Review</td><td>Itinerary review + improvements</td><td>$15 USD</td></tr></tbody></table></div>
+      <div class="divider"></div>
+      <div class="terms-section"><p class="section-label">03</p><h2>Refund policy</h2><div class="terms-highlight"><p><strong>Before payment:</strong> No charge, no commitment. You fill in a form first — you only pay when Ken sends you a payment link and you choose to proceed.</p></div><table class="terms-table"><thead><tr><th>Situation</th><th>Refund</th></tr></thead><tbody><tr><td>Before payment</td><td>No charge — free to stop at any time</td></tr><tr><td>After payment, before curation begins</td><td>Full refund (100%)</td></tr><tr><td>After curation has begun</td><td>No refund — digital goods policy</td></tr><tr><td>Guide not received within 7 business days</td><td>Full refund or re-delivery</td></tr></tbody></table></div>
+      <div class="divider"></div>
+      <div class="terms-section"><p class="section-label">04</p><h2>Delivery</h2><p>Guides are delivered as PDF documents within <strong>3–5 business days</strong> of questionnaire submission (Monday–Friday, JST).</p></div>
+      <div class="divider"></div>
+      <div class="terms-section"><p class="section-label">05</p><h2>Intellectual property</h2><p>Your guide is for <strong>personal use only.</strong> It may not be resold, redistributed, or shared publicly.</p></div>
+      <div class="divider"></div>
+      <div class="terms-section"><p class="section-label">06</p><h2>Limitation of liability</h2><p>My Japan Trip provides recommendations in good faith. I am not responsible for changes in opening hours or accessibility after delivery. Always verify details locally before visiting.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ QUESTIONNAIRE PAGE ═══ -->
+
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">My <em>Japan</em> Trip</div>
+      <div class="footer-tagline"><span>Made by Ken — a Japanese local based in Japan.</span></div>
+    </div>
+    <div class="footer-links">
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('plans')">Plans</a>
+      <a onclick="showPage('sample')">Sample guide</a>
+      <a onclick="showPage('about')">About</a>
+      <a onclick="showPage('faq')">FAQ</a>
+      <a onclick="showPage('terms')">Terms & Refunds</a>
+      <a href="/blog.html">Blog</a>
+    </div>
+    <div class="footer-contact">
+      <div style="font-size:11px; color:rgba(255,255,255,0.4); margin-bottom:0.4rem; letter-spacing:0.08em; text-transform:uppercase;">Contact</div>
+      <a href="mailto:hello@myjapantrip.net">hello@myjapantrip.net</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 My Japan Trip — All rights reserved · Operated by a Japanese local based in Japan · <a href="mailto:hello@myjapantrip.net" style="color:rgba(255,255,255,0.4); text-decoration:none;">hello@myjapantrip.net</a></span>
+    <span><a onclick="showPage('terms')" style="color:rgba(255,255,255,0.3); text-decoration:none; cursor:pointer;">Terms & Refund Policy</a></span>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const burger = document.getElementById('hamburger');
+    menu.classList.toggle('open');
+    burger.classList.toggle('open');
+  }
+  function closeMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const burger = document.getElementById('hamburger');
+    menu.classList.remove('open');
+    burger.classList.remove('open');
+  }
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobile-menu');
+    const burger = document.getElementById('hamburger');
+    if (menu && !e.target.closest('#mobile-menu') && !e.target.closest('#hamburger')) {
+      menu.classList.remove('open');
+      burger.classList.remove('open');
+    }
+  });
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const icon = el.querySelector('.faq-icon');
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a.open').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-icon.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) { answer.classList.add('open'); icon.classList.add('open'); }
+  }
+</script>
+
+</body>
+</html>
